@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextDatabase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="texts.xsd" Version="4.27.0">
+  <Languages>
+    <Language Id="GB" />
+  </Languages>
+  <Texts>
+    <TextGroup Id="Group1" />
+    <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_LZIA" Alignment="Left" TypographyId="RADEC_Labels_Medium">
+        <Translation Language="GB">0000</Translation>
+      </Text>
+      <Text Id="__SingleUse_F55N" Alignment="Left" TypographyId="Telemetry_medium">
+        <Translation Language="GB">0000</Translation>
+      </Text>
+      <Text Id="__SingleUse_MO6T" Alignment="Center" TypographyId="Telemetry_medium">
+        <Translation Language="GB">&lt;value&gt; / &lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_0CL8" Alignment="Left" TypographyId="Telemetry_medium">
+        <Translation Language="GB">-- h -- m -- s</Translation>
+      </Text>
+      <Text Id="__SingleUse_MXUE" Alignment="Center" TypographyId="Telemetry_medium">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_1AS1" Alignment="Center" TypographyId="Telemetry">
+        <Translation Language="GB">Completed exposures</Translation>
+      </Text>
+      <Text Id="__SingleUse_5KOU" Alignment="Center" TypographyId="Telemetry">
+        <Translation Language="GB">Total exposure time</Translation>
+      </Text>
+      <Text Id="__SingleUse_KVNA" Alignment="Center" TypographyId="RADEC_Labels_Medium">
+        <Translation Language="GB">STOP</Translation>
+      </Text>
+      <Text Id="__SingleUse_LL8A" Alignment="Center" TypographyId="RADEC_Labels_Medium">
+        <Translation Language="GB">START</Translation>
+      </Text>
+      <Text Id="__SingleUse_CDZ5" Alignment="Left" TypographyId="RADEC_wheel">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_R2D1" Alignment="Center" TypographyId="RADEC_wheel">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_GNFU" Alignment="Center" TypographyId="Telemetry">
+        <Translation Language="GB">Image count</Translation>
+      </Text>
+      <Text Id="__SingleUse_8YJ7" Alignment="Center" TypographyId="Telemetry">
+        <Translation Language="GB">Exposure duration</Translation>
+      </Text>
+      <Text Id="__SingleUse_MBPU" Alignment="Center" TypographyId="RADEC_Labels_Small">
+        <Translation Language="GB">m</Translation>
+      </Text>
+      <Text Id="__SingleUse_ECRS" Alignment="Center" TypographyId="RADEC_Labels_Small">
+        <Translation Language="GB">s</Translation>
+      </Text>
+      <Text Id="__SingleUse_6AW8" Alignment="Left" TypographyId="Telemetry_medium">
+        <Translation Language="GB">00.000</Translation>
+      </Text>
+      <Text Id="__SingleUse_4287" Alignment="Left" TypographyId="Telemetry_medium">
+        <Translation Language="GB">&lt;value&gt; V</Translation>
+      </Text>
+      <Text Id="__SingleUse_CG5D" Alignment="Left" TypographyId="Telemetry_medium">
+        <Translation Language="GB">00.000</Translation>
+      </Text>
+      <Text Id="__SingleUse_1D0A" Alignment="Left" TypographyId="Telemetry_medium">
+        <Translation Language="GB">&lt;value&gt; V</Translation>
+      </Text>
+      <Text Id="__SingleUse_WSEV" Alignment="Left" TypographyId="RADEC_Labels_Medium">
+        <Translation Language="GB">+</Translation>
+      </Text>
+      <Text Id="__SingleUse_ABDJ" Alignment="Center" TypographyId="RADEC_Labels_Medium">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_534R" Alignment="Left" TypographyId="Telemetry_medium">
+        <Translation Language="GB">00.000</Translation>
+      </Text>
+      <Text Id="__SingleUse_HT27" Alignment="Left" TypographyId="Telemetry_medium">
+        <Translation Language="GB">&lt;value&gt;°</Translation>
+      </Text>
+      <Text Id="__SingleUse_873Q" Alignment="Left" TypographyId="Telemetry_medium">
+        <Translation Language="GB">00.000</Translation>
+      </Text>
+      <Text Id="__SingleUse_YOZD" Alignment="Left" TypographyId="Telemetry_medium">
+        <Translation Language="GB">&lt;value&gt;°</Translation>
+      </Text>
+      <Text Id="__SingleUse_VASJ" Alignment="Left" TypographyId="Telemetry_medium">
+        <Translation Language="GB">00.000</Translation>
+      </Text>
+      <Text Id="__SingleUse_4FJK" Alignment="Left" TypographyId="Telemetry_medium">
+        <Translation Language="GB">&lt;value&gt;°</Translation>
+      </Text>
+      <Text Id="__SingleUse_YWON" Alignment="Left" TypographyId="Telemetry_medium">
+        <Translation Language="GB">00.000</Translation>
+      </Text>
+      <Text Id="__SingleUse_Y65Y" Alignment="Left" TypographyId="Telemetry_medium">
+        <Translation Language="GB">&lt;value&gt;°</Translation>
+      </Text>
+      <Text Id="__SingleUse_7042" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">PCK-ST1</Translation>
+      </Text>
+      <Text Id="__SingleUse_P27V" Alignment="Left" TypographyId="Telemetry_medium">
+        <Translation Language="GB">+-- °  -- "   -- '</Translation>
+      </Text>
+      <Text Id="__SingleUse_VF35" Alignment="Center" TypographyId="Telemetry_medium">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_QV09" Alignment="Left" TypographyId="Telemetry_medium">
+        <Translation Language="GB">-- h -- m -- s</Translation>
+      </Text>
+      <Text Id="__SingleUse_Z6G6" Alignment="Center" TypographyId="Telemetry_medium">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_WK6T" Alignment="Center" TypographyId="Telemetry">
+        <Translation Language="GB">Voltage</Translation>
+      </Text>
+      <Text Id="__SingleUse_I7VD" Alignment="Center" TypographyId="Telemetry">
+        <Translation Language="GB">Mechanical position</Translation>
+      </Text>
+      <Text Id="__SingleUse_UQEU" Alignment="Center" TypographyId="Telemetry">
+        <Translation Language="GB">Celestial coordinates</Translation>
+      </Text>
+      <Text Id="__SingleUse_CBHW" Alignment="Left" TypographyId="Telemetry">
+        <Translation Language="GB">Controller</Translation>
+      </Text>
+      <Text Id="__SingleUse_WQJU" Alignment="Left" TypographyId="Telemetry">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_AGM1" Alignment="Left" TypographyId="Telemetry">
+        <Translation Language="GB">DEC Position:</Translation>
+      </Text>
+      <Text Id="__SingleUse_PX1D" Alignment="Left" TypographyId="Telemetry">
+        <Translation Language="GB">RA Position:</Translation>
+      </Text>
+      <Text Id="__SingleUse_USNJ" Alignment="Left" TypographyId="Telemetry">
+        <Translation Language="GB">AZ Position:</Translation>
+      </Text>
+      <Text Id="__SingleUse_ZWNT" Alignment="Left" TypographyId="Telemetry">
+        <Translation Language="GB">ALT Position:</Translation>
+      </Text>
+      <Text Id="__SingleUse_V0ZB" Alignment="Left" TypographyId="Telemetry">
+        <Translation Language="GB">DEC Coordinates:</Translation>
+      </Text>
+      <Text Id="__SingleUse_IELA" Alignment="Left" TypographyId="Telemetry">
+        <Translation Language="GB">RA Coordinates:</Translation>
+      </Text>
+      <Text Id="__SingleUse_6J6A" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Waiting for connection...</Translation>
+      </Text>
+      <Text Id="__SingleUse_8J9K" Alignment="Center" TypographyId="Flags">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_PR5Y" Alignment="Left" TypographyId="Default">
+        <Translation Language="GB">Waiting for homing...</Translation>
+      </Text>
+      <Text Id="__SingleUse_3RDG" Alignment="Center" TypographyId="Flags">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_YOM7" Alignment="Left" TypographyId="Flags">
+        <Translation Language="GB">---.---</Translation>
+      </Text>
+      <Text Id="__SingleUse_TJ9L" Alignment="Center" TypographyId="Flags">
+        <Translation Language="GB">&lt;value&gt;"</Translation>
+      </Text>
+      <Text Id="__SingleUse_72CN" Alignment="Left" TypographyId="Flags">
+        <Translation Language="GB">---.---</Translation>
+      </Text>
+      <Text Id="__SingleUse_KICS" Alignment="Center" TypographyId="Flags">
+        <Translation Language="GB">&lt;value&gt;"</Translation>
+      </Text>
+      <Text Id="__SingleUse_8ZU6" Alignment="Left" TypographyId="Flags">
+        <Translation Language="GB">---.---</Translation>
+      </Text>
+      <Text Id="__SingleUse_8IV4" Alignment="Center" TypographyId="Flags">
+        <Translation Language="GB">&lt;value&gt;"</Translation>
+      </Text>
+      <Text Id="__SingleUse_9UPL" Alignment="Center" TypographyId="Flags">
+        <Translation Language="GB">Polar Alignment</Translation>
+      </Text>
+      <Text Id="__SingleUse_NEHJ" Alignment="Left" TypographyId="Flags">
+        <Translation Language="GB">Total error</Translation>
+      </Text>
+      <Text Id="__SingleUse_Y4XO" Alignment="Center" TypographyId="Flags">
+        <Translation Language="GB">System status</Translation>
+      </Text>
+      <Text Id="__SingleUse_K63B" Alignment="Left" TypographyId="Flags">
+        <Translation Language="GB">AZ error</Translation>
+      </Text>
+      <Text Id="__SingleUse_RNQJ" Alignment="Left" TypographyId="Flags">
+        <Translation Language="GB">ALT error</Translation>
+      </Text>
+      <Text Id="__SingleUse_WXA9" Alignment="Left" TypographyId="Flags">
+        <Translation Language="GB">Ready</Translation>
+      </Text>
+      <Text Id="__SingleUse_G5WO" Alignment="Left" TypographyId="Flags">
+        <Translation Language="GB">Polar aligned</Translation>
+      </Text>
+      <Text Id="__SingleUse_YFHF" Alignment="Left" TypographyId="Flags">
+        <Translation Language="GB">Alignment ready</Translation>
+      </Text>
+      <Text Id="__SingleUse_Y77Z" Alignment="Left" TypographyId="Flags">
+        <Translation Language="GB">Homed</Translation>
+      </Text>
+      <Text Id="__SingleUse_R6YF" Alignment="Left" TypographyId="Flags">
+        <Translation Language="GB">Connected</Translation>
+      </Text>
+      <Text Id="__SingleUse_OI7Q" Alignment="Center" TypographyId="RADEC_Labels">
+        <Translation Language="GB">A&#10;</Translation>
+      </Text>
+      <Text Id="__SingleUse_YSR8" Alignment="Center" TypographyId="RADEC_Labels">
+        <Translation Language="GB">R&#10;</Translation>
+      </Text>
+      <Text Id="__SingleUse_UPQH" Alignment="Center" TypographyId="RADEC_Labels">
+        <Translation Language="GB">D</Translation>
+      </Text>
+      <Text Id="__SingleUse_S7GG" Alignment="Center" TypographyId="RADEC_Labels">
+        <Translation Language="GB">E</Translation>
+      </Text>
+      <Text Id="__SingleUse_YTK9" Alignment="Center" TypographyId="RADEC_Labels">
+        <Translation Language="GB">C</Translation>
+      </Text>
+      <Text Id="__SingleUse_4AUV" Alignment="Center" TypographyId="RADEC_Labels">
+        <Translation Language="GB">GOTO</Translation>
+      </Text>
+      <Text Id="__SingleUse_4TP0" Alignment="Center" TypographyId="RADEC_Labels_Small">
+        <Translation Language="GB">h</Translation>
+      </Text>
+      <Text Id="__SingleUse_J5IB" Alignment="Center" TypographyId="RADEC_Labels_Small">
+        <Translation Language="GB">m</Translation>
+      </Text>
+      <Text Id="__SingleUse_ZQC0" Alignment="Center" TypographyId="RADEC_Labels_Small">
+        <Translation Language="GB">s</Translation>
+      </Text>
+      <Text Id="__SingleUse_RMBF" Alignment="Center" TypographyId="RADEC_Labels_Medium">
+        <Translation Language="GB">°</Translation>
+      </Text>
+      <Text Id="__SingleUse_73VA" Alignment="Center" TypographyId="RADEC_Labels_Medium">
+        <Translation Language="GB">"</Translation>
+      </Text>
+      <Text Id="__SingleUse_LDWD" Alignment="Center" TypographyId="RADEC_Labels_Medium">
+        <Translation Language="GB">'</Translation>
+      </Text>
+      <Text Id="__SingleUse_VEYC" Alignment="Center" TypographyId="TabName">
+        <Translation Language="GB">TAB1</Translation>
+      </Text>
+      <Text Id="__SingleUse_DYAU" Alignment="Center" TypographyId="TabName">
+        <Translation Language="GB">TAB2</Translation>
+      </Text>
+      <Text Id="__SingleUse_94QE" Alignment="Center" TypographyId="TabName">
+        <Translation Language="GB">TAB3</Translation>
+      </Text>
+      <Text Id="__SingleUse_7ASP" Alignment="Center" TypographyId="TabName">
+        <Translation Language="GB">tabButton1</Translation>
+      </Text>
+      <Text Id="__SingleUse_F7YR" Alignment="Center" TypographyId="TabName">
+        <Translation Language="GB">tabButton2</Translation>
+      </Text>
+      <Text Id="__SingleUse_SYCE" Alignment="Center" TypographyId="TabName">
+        <Translation Language="GB">tabButton3</Translation>
+      </Text>
+      <Text Id="__SingleUse_N23J" Alignment="Center" TypographyId="TabName">
+        <Translation Language="GB">TAB2</Translation>
+      </Text>
+      <Text Id="__SingleUse_4VS0" Alignment="Center" TypographyId="TabName">
+        <Translation Language="GB">TAB3</Translation>
+      </Text>
+      <Text Id="__SingleUse_A5F4" Alignment="Center" TypographyId="TabName">
+        <Translation Language="GB">Camera control</Translation>
+      </Text>
+      <Text Id="__SingleUse_ZZ9X" Alignment="Center" TypographyId="TabName">
+        <Translation Language="GB">TAB3</Translation>
+      </Text>
+      <Text Id="__SingleUse_IWPF" Alignment="Center" TypographyId="TabName">
+        <Translation Language="GB">Telemetry</Translation>
+      </Text>
+      <Text Id="__SingleUse_SB1Q" Alignment="Center" TypographyId="TabName">
+        <Translation Language="GB">Control flags</Translation>
+      </Text>
+      <Text Id="__SingleUse_1XAQ" Alignment="Center" TypographyId="TabName">
+        <Translation Language="GB">tabButton3</Translation>
+      </Text>
+      <Text Id="__SingleUse_8LF5" Alignment="Center" TypographyId="TabName">
+        <Translation Language="GB">TAB1</Translation>
+      </Text>
+      <Text Id="__SingleUse_865S" Alignment="Center" TypographyId="TabName">
+        <Translation Language="GB">GOTO&#10;</Translation>
+      </Text>
+      <Text Id="__SingleUse_KFAU" Alignment="Center" TypographyId="TabName">
+        <Translation Language="GB">MOVE</Translation>
+      </Text>
+      <Text Id="__SingleUse_TRW3" Alignment="Left" TypographyId="RADEC_wheel">
+        <Translation Language="GB">00</Translation>
+      </Text>
+      <Text Id="__SingleUse_ZVGV" Alignment="Center" TypographyId="RADEC_wheel">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_DLGH" Alignment="Center" TypographyId="PCK_large">
+        <Translation Language="GB">PCK</Translation>
+      </Text>
+    </TextGroup>
+  </Texts>
+  <Typographies>
+    <Typography Id="Default" Font="verdana.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Large" Font="verdana.ttf" Size="40" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Small" Font="verdana.ttf" Size="10" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="PCK_large" Font="PCK.ttf" Size="100" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="RADEC_wheel" Font="bahnschrift.ttf" Size="51" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="0" WildcardCharacters="0123456789" />
+    <Typography Id="TabName" Font="arialbd.ttf" Size="17" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="RADEC_Labels" Font="bahnschrift.ttf" Size="45" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="RADEC_Labels_Small" Font="bahnschrift.ttf" Size="35" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="RADEC_Labels_Medium" Font="bahnschrift.ttf" Size="39" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="+" WildcardCharacters="-+" />
+    <Typography Id="Flags" Font="bahnschrift.ttf" Size="16" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Telemetry" Font="bahnschrift.ttf" Size="18" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="PCK-ST1 Controller" />
+    <Typography Id="Telemetry_medium" Font="bahnschrift.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="hms°&quot;'-+0123456789" />
+  </Typographies>
+</TextDatabase>

@@ -1,0 +1,5820 @@
+{
+  "Application": {
+    "Screens": [
+      {
+        "Name": "Loading_screen",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "backgroundDark",
+            "Width": 480,
+            "Height": 320,
+            "Color": {
+              "Red": 36,
+              "Green": 36,
+              "Blue": 36
+            }
+          },
+          {
+            "Type": "Image",
+            "Name": "background",
+            "X": -240,
+            "Y": -99,
+            "Width": 960,
+            "Height": 3200,
+            "RelativeFilename": "image-mesh-gradient.png",
+            "Alpha": 203
+          },
+          {
+            "Type": "BoxProgress",
+            "Name": "boxProgress1",
+            "X": 90,
+            "Y": 247,
+            "Width": 300,
+            "Height": 10,
+            "Color": {
+              "Red": 122,
+              "Green": 40,
+              "Blue": 40
+            },
+            "Direction": "Right",
+            "Alpha": 200,
+            "FileNameBackground": "load_bar_grey.png",
+            "IndicatorPositionWidth": 300,
+            "IndicatorPositionHeight": 10,
+            "ProgressRangeMax": 100,
+            "ProgressRangeSteps": 50
+          },
+          {
+            "Type": "TextArea",
+            "Name": "loading_logo",
+            "X": 97,
+            "Y": 97,
+            "Width": 287,
+            "Height": 107,
+            "TextId": "__SingleUse_DLGH",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 209,
+              "Green": 209,
+              "Blue": 209
+            },
+            "AutoSize": true
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Loading_done",
+            "Trigger": {
+              "Type": "TriggerProgressIndicatorValueUpdateCompleted",
+              "TriggerComponent": "boxProgress1"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "HomeScreen"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "HomeScreen",
+        "CanvasBufferSize": 7200,
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "backgroundDark",
+            "X": 60,
+            "Width": 420,
+            "Height": 320,
+            "Color": {
+              "Red": 31,
+              "Green": 31,
+              "Blue": 31
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "backgroundLighter",
+            "X": 65,
+            "Y": 5,
+            "Width": 410,
+            "Height": 310,
+            "Color": {
+              "Red": 56,
+              "Green": 56,
+              "Blue": 56
+            }
+          },
+          {
+            "Type": "Circle",
+            "Name": "CornerRB",
+            "X": 470,
+            "Y": 310,
+            "Width": 15,
+            "Height": 15,
+            "Color": {
+              "Red": 31,
+              "Green": 31,
+              "Blue": 31
+            },
+            "Radius": 10.0,
+            "LineWidth": 10.0,
+            "StartAngle": 90.0,
+            "EndAngle": 180.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "Circle",
+            "Name": "CornerLB",
+            "X": 55,
+            "Y": 310,
+            "Width": 15,
+            "Height": 15,
+            "Color": {
+              "Red": 31,
+              "Green": 31,
+              "Blue": 31
+            },
+            "CenterX": 15.0,
+            "Radius": 10.0,
+            "LineWidth": 10.0,
+            "StartAngle": 270.0,
+            "EndAngle": 180.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "Circle",
+            "Name": "CornerRT",
+            "X": 470,
+            "Y": -5,
+            "Width": 15,
+            "Height": 15,
+            "Color": {
+              "Red": 31,
+              "Green": 31,
+              "Blue": 31
+            },
+            "CenterY": 15.0,
+            "Radius": 10.0,
+            "LineWidth": 10.0,
+            "EndAngle": 90.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "Circle",
+            "Name": "CornerLT",
+            "X": 55,
+            "Y": -5,
+            "Width": 15,
+            "Height": 15,
+            "Color": {
+              "Red": 31,
+              "Green": 31,
+              "Blue": 31
+            },
+            "CenterX": 15.0,
+            "CenterY": 15.0,
+            "Radius": 10.0,
+            "LineWidth": 10.0,
+            "StartAngle": 270.0,
+            "EndAngle": 360.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "settingsButton",
+            "Y": 256,
+            "Width": 60,
+            "Height": 64,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "IconButtonStyle",
+                "X": 13,
+                "Y": 15,
+                "IconReleased": "__generated\\icon_theme_images_action_settings_35_35_E8F6FB.svg.png",
+                "IconPressed": "__generated\\icon_theme_images_action_settings_35_35_E8F6FB.svg.png"
+              },
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 60,
+                "Height": 64,
+                "LockToFlexButtonSize": true,
+                "ColorReleased": {
+                  "Red": 79,
+                  "Green": 79,
+                  "Blue": 79
+                },
+                "ColorPressed": {
+                  "Red": 48,
+                  "Green": 48,
+                  "Blue": 48
+                }
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "cameraButton",
+            "Y": 192,
+            "Width": 60,
+            "Height": 64,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "IconButtonStyle",
+                "X": 13,
+                "Y": 16,
+                "IconReleased": "__generated\\icon_theme_images_image_photo_camera_35_35_E8F6FB.svg.png",
+                "IconPressed": "__generated\\icon_theme_images_image_photo_camera_35_35_E8F6FB.svg.png"
+              },
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 60,
+                "Height": 64,
+                "LockToFlexButtonSize": true,
+                "ColorReleased": {
+                  "Red": 79,
+                  "Green": 79,
+                  "Blue": 79
+                },
+                "ColorPressed": {
+                  "Red": 48,
+                  "Green": 48,
+                  "Blue": 48
+                }
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "gotoButton",
+            "Y": 128,
+            "Width": 60,
+            "Height": 64,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "IconButtonStyle",
+                "X": 13,
+                "Y": 15,
+                "IconReleased": "__generated\\icon_theme_images_action_open_with_35_35_E8F6FB.svg.png",
+                "IconPressed": "__generated\\icon_theme_images_action_open_with_35_35_E8F6FB.svg.png"
+              },
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 60,
+                "Height": 64,
+                "LockToFlexButtonSize": true,
+                "ColorReleased": {
+                  "Red": 79,
+                  "Green": 79,
+                  "Blue": 79
+                },
+                "ColorPressed": {
+                  "Red": 48,
+                  "Green": 48,
+                  "Blue": 48
+                }
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "telemetryButton",
+            "Y": 64,
+            "Width": 60,
+            "Height": 64,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "IconButtonStyle",
+                "X": 13,
+                "Y": 14,
+                "IconReleased": "__generated\\icon_theme_images_action_assessment_35_35_E8F6FB.svg.png",
+                "IconPressed": "__generated\\icon_theme_images_action_assessment_35_35_E8F6FB.svg.png"
+              },
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 60,
+                "Height": 64,
+                "LockToFlexButtonSize": true,
+                "ColorReleased": {
+                  "Red": 79,
+                  "Green": 79,
+                  "Blue": 79
+                },
+                "ColorPressed": {
+                  "Red": 48,
+                  "Green": 48,
+                  "Blue": 48
+                }
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "homeButton",
+            "Width": 60,
+            "Height": 64,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "IconButtonStyle",
+                "X": 13,
+                "Y": 14,
+                "IconReleased": "__generated\\icon_theme_images_action_home_filled_35_35_E8F6FB.svg.png",
+                "IconPressed": "__generated\\icon_theme_images_action_home_filled_35_35_E8F6FB.svg.png"
+              },
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 60,
+                "Height": 64,
+                "LockToFlexButtonSize": true,
+                "ColorReleased": {
+                  "Red": 48,
+                  "Green": 48,
+                  "Blue": 48
+                },
+                "ColorPressed": {
+                  "Red": 48,
+                  "Green": 48,
+                  "Blue": 48
+                }
+              }
+            ]
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "systemStatusBackground1",
+            "X": 71,
+            "Y": 39,
+            "Width": 170,
+            "Height": 160,
+            "CustomContainerDefinitionName": "SystemStatusBackground"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "polarAlignmentBackground1",
+            "X": 71,
+            "Y": 236,
+            "Width": 170,
+            "Height": 73,
+            "CustomContainerDefinitionName": "PolarAlignmentBackground"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "consoleBackground1",
+            "X": 249,
+            "Y": 39,
+            "Width": 220,
+            "Height": 270,
+            "CustomContainerDefinitionName": "ConsoleBackground"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "labelBox_Medium1",
+            "X": 249,
+            "Y": 11,
+            "Width": 220,
+            "Height": 25,
+            "CustomContainerDefinitionName": "LabelBox_Medium"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "labelBox_Small2",
+            "X": 71,
+            "Y": 208,
+            "Width": 170,
+            "Height": 25,
+            "CustomContainerDefinitionName": "LabelBox_Small"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "labelBox_Small1",
+            "X": 71,
+            "Y": 11,
+            "Width": 170,
+            "Height": 25,
+            "CustomContainerDefinitionName": "LabelBox_Small"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "polarAlignmentLabel",
+            "X": 71,
+            "Y": 210,
+            "Width": 170,
+            "Height": 21,
+            "TextId": "__SingleUse_9UPL",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 196,
+              "Green": 196,
+              "Blue": 196
+            }
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "readyFlag",
+            "X": 74,
+            "Y": 168,
+            "Width": 155,
+            "Height": 22,
+            "CustomContainerDefinitionName": "Flags"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "readyLabel",
+            "X": 106,
+            "Y": 168,
+            "Width": 123,
+            "Height": 22,
+            "TextId": "__SingleUse_WXA9",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 196,
+              "Green": 196,
+              "Blue": 196
+            }
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "polarAlignedFlag",
+            "X": 74,
+            "Y": 138,
+            "Width": 155,
+            "Height": 22,
+            "CustomContainerDefinitionName": "Flags"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "polarAlignedLabel",
+            "X": 106,
+            "Y": 138,
+            "Width": 123,
+            "Height": 22,
+            "TextId": "__SingleUse_G5WO",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 196,
+              "Green": 196,
+              "Blue": 196
+            }
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "alignReadyFlag",
+            "X": 74,
+            "Y": 108,
+            "Width": 155,
+            "Height": 22,
+            "CustomContainerDefinitionName": "Flags"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "alignReadyLabel",
+            "X": 106,
+            "Y": 108,
+            "Width": 123,
+            "Height": 22,
+            "TextId": "__SingleUse_YFHF",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 196,
+              "Green": 196,
+              "Blue": 196
+            }
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "homedFlag",
+            "X": 74,
+            "Y": 78,
+            "Width": 155,
+            "Height": 22,
+            "CustomContainerDefinitionName": "Flags"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "homedLabel",
+            "X": 106,
+            "Y": 78,
+            "Width": 123,
+            "Height": 22,
+            "TextId": "__SingleUse_Y77Z",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 196,
+              "Green": 196,
+              "Blue": 196
+            }
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "connectedFlag",
+            "X": 74,
+            "Y": 48,
+            "Width": 155,
+            "Height": 22,
+            "CustomContainerDefinitionName": "Flags"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "connectedLabel",
+            "X": 106,
+            "Y": 48,
+            "Width": 123,
+            "Height": 22,
+            "TextId": "__SingleUse_R6YF",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 196,
+              "Green": 196,
+              "Blue": 196
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "systemStatusLabel",
+            "X": 71,
+            "Y": 13,
+            "Width": 170,
+            "Height": 21,
+            "TextId": "__SingleUse_Y4XO",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 196,
+              "Green": 196,
+              "Blue": 196
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "totalErrorLabel",
+            "X": 84,
+            "Y": 280,
+            "Width": 85,
+            "Height": 20,
+            "TextId": "__SingleUse_NEHJ",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 196,
+              "Green": 196,
+              "Blue": 196
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "azErrorLabel",
+            "X": 84,
+            "Y": 260,
+            "Width": 85,
+            "Height": 20,
+            "TextId": "__SingleUse_K63B",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 196,
+              "Green": 196,
+              "Blue": 196
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "altErrorLabel",
+            "X": 84,
+            "Y": 240,
+            "Width": 85,
+            "Height": 20,
+            "TextId": "__SingleUse_RNQJ",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 196,
+              "Green": 196,
+              "Blue": 196
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "totalError",
+            "X": 169,
+            "Y": 280,
+            "Width": 65,
+            "Height": 20,
+            "TextId": "__SingleUse_TJ9L",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 196,
+              "Green": 196,
+              "Blue": 196
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_YOM7"
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "azError",
+            "X": 169,
+            "Y": 260,
+            "Width": 65,
+            "Height": 20,
+            "TextId": "__SingleUse_KICS",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 196,
+              "Green": 196,
+              "Blue": 196
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_72CN"
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "altError",
+            "X": 169,
+            "Y": 240,
+            "Width": 65,
+            "Height": 20,
+            "TextId": "__SingleUse_8IV4",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 196,
+              "Green": 196,
+              "Blue": 196
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_8ZU6"
+            }
+          },
+          {
+            "Type": "Container",
+            "Name": "HomingContainer",
+            "X": 249,
+            "Y": 11,
+            "Width": 220,
+            "Height": 298,
+            "Visible": false,
+            "Components": [
+              {
+                "Type": "TextArea",
+                "Name": "containerLabel",
+                "Y": 2,
+                "Width": 220,
+                "Height": 21,
+                "TextId": "__SingleUse_3RDG",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 196,
+                  "Green": 196,
+                  "Blue": 196
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_PR5Y",
+                  "UseBuffer": true,
+                  "BufferSize": 20
+                }
+              }
+            ]
+          },
+          {
+            "Type": "Container",
+            "Name": "ConnectionContainer_1",
+            "X": 249,
+            "Y": 11,
+            "Width": 220,
+            "Height": 298,
+            "Components": [
+              {
+                "Type": "TextArea",
+                "Name": "containerLabel_1",
+                "Y": 2,
+                "Width": 220,
+                "Height": 21,
+                "TextId": "__SingleUse_8J9K",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 196,
+                  "Green": 196,
+                  "Blue": 196
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_6J6A",
+                  "UseBuffer": true,
+                  "BufferSize": 32
+                }
+              }
+            ]
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "telemetryScreen",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "telemetryButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "TelemetryScreen"
+            }
+          },
+          {
+            "InteractionName": "gotoScreen",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "gotoButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "GotoScreen"
+            }
+          },
+          {
+            "InteractionName": "cameraScreen",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "cameraButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "CameraScreen"
+            }
+          },
+          {
+            "InteractionName": "settingsScreen",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "settingsButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "SettingsScreen"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "TelemetryScreen",
+        "CanvasBufferSize": 7200,
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "backgroundDark",
+            "X": 60,
+            "Width": 420,
+            "Height": 320,
+            "Color": {
+              "Red": 31,
+              "Green": 31,
+              "Blue": 31
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "backgroundLighter",
+            "X": 65,
+            "Y": 30,
+            "Width": 410,
+            "Height": 285,
+            "Color": {
+              "Red": 56,
+              "Green": 56,
+              "Blue": 56
+            }
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "backgroundMask1",
+            "X": 60,
+            "Width": 420,
+            "Height": 320,
+            "CustomContainerDefinitionName": "BackgroundMask"
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "settingsButton",
+            "Y": 256,
+            "Width": 60,
+            "Height": 64,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "IconButtonStyle",
+                "X": 13,
+                "Y": 15,
+                "IconReleased": "__generated\\icon_theme_images_action_settings_35_35_E8F6FB.svg.png",
+                "IconPressed": "__generated\\icon_theme_images_action_settings_35_35_E8F6FB.svg.png"
+              },
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 60,
+                "Height": 64,
+                "LockToFlexButtonSize": true,
+                "ColorReleased": {
+                  "Red": 79,
+                  "Green": 79,
+                  "Blue": 79
+                },
+                "ColorPressed": {
+                  "Red": 48,
+                  "Green": 48,
+                  "Blue": 48
+                }
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "cameraButton",
+            "Y": 192,
+            "Width": 60,
+            "Height": 64,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "IconButtonStyle",
+                "X": 13,
+                "Y": 16,
+                "IconReleased": "__generated\\icon_theme_images_image_photo_camera_35_35_E8F6FB.svg.png",
+                "IconPressed": "__generated\\icon_theme_images_image_photo_camera_35_35_E8F6FB.svg.png"
+              },
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 60,
+                "Height": 64,
+                "LockToFlexButtonSize": true,
+                "ColorReleased": {
+                  "Red": 79,
+                  "Green": 79,
+                  "Blue": 79
+                },
+                "ColorPressed": {
+                  "Red": 48,
+                  "Green": 48,
+                  "Blue": 48
+                }
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "gotoButton",
+            "Y": 128,
+            "Width": 60,
+            "Height": 64,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "IconButtonStyle",
+                "X": 13,
+                "Y": 15,
+                "IconReleased": "__generated\\icon_theme_images_action_open_with_35_35_E8F6FB.svg.png",
+                "IconPressed": "__generated\\icon_theme_images_action_open_with_35_35_E8F6FB.svg.png"
+              },
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 60,
+                "Height": 64,
+                "LockToFlexButtonSize": true,
+                "ColorReleased": {
+                  "Red": 79,
+                  "Green": 79,
+                  "Blue": 79
+                },
+                "ColorPressed": {
+                  "Red": 48,
+                  "Green": 48,
+                  "Blue": 48
+                }
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "telemetryButton",
+            "Y": 64,
+            "Width": 60,
+            "Height": 64,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "IconButtonStyle",
+                "X": 13,
+                "Y": 14,
+                "IconReleased": "__generated\\icon_theme_images_action_assessment_35_35_E8F6FB.svg.png",
+                "IconPressed": "__generated\\icon_theme_images_action_assessment_35_35_E8F6FB.svg.png"
+              },
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 60,
+                "Height": 64,
+                "LockToFlexButtonSize": true,
+                "ColorReleased": {
+                  "Red": 48,
+                  "Green": 48,
+                  "Blue": 48
+                },
+                "ColorPressed": {
+                  "Red": 48,
+                  "Green": 48,
+                  "Blue": 48
+                }
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "homeButton",
+            "Width": 60,
+            "Height": 64,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "IconButtonStyle",
+                "X": 13,
+                "Y": 14,
+                "IconReleased": "__generated\\icon_theme_images_action_home_filled_35_35_E8F6FB.svg.png",
+                "IconPressed": "__generated\\icon_theme_images_action_home_filled_35_35_E8F6FB.svg.png"
+              },
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 60,
+                "Height": 64,
+                "LockToFlexButtonSize": true,
+                "ColorReleased": {
+                  "Red": 79,
+                  "Green": 79,
+                  "Blue": 79
+                },
+                "ColorPressed": {
+                  "Red": 48,
+                  "Green": 48,
+                  "Blue": 48
+                }
+              }
+            ]
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "menuTab3",
+            "X": 338,
+            "Y": 5,
+            "Width": 130,
+            "Height": 25,
+            "CustomContainerDefinitionName": "MenuTabDark1_3"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "menuTab2",
+            "X": 205,
+            "Y": 5,
+            "Width": 130,
+            "Height": 25,
+            "CustomContainerDefinitionName": "MenuTabDark1_3"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "menuTab1",
+            "X": 72,
+            "Y": 5,
+            "Width": 130,
+            "Height": 25,
+            "CustomContainerDefinitionName": "MenuTabDark1_3"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "menuTabSelected",
+            "X": 72,
+            "Y": 5,
+            "Width": 130,
+            "Height": 25,
+            "CustomContainerDefinitionName": "MenuTabLight1_3"
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "tabButton3",
+            "X": 338,
+            "Y": 5,
+            "Width": 130,
+            "Height": 25,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "TextButtonStyle",
+                "Y": 2,
+                "TextId": "__SingleUse_1XAQ",
+                "TextRotation": "0",
+                "ColorReleased": {
+                  "Red": 196,
+                  "Green": 196,
+                  "Blue": 196
+                },
+                "ColorPressed": {
+                  "Red": 46,
+                  "Green": 46,
+                  "Blue": 46
+                }
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "tabButton2",
+            "X": 205,
+            "Y": 5,
+            "Width": 130,
+            "Height": 25,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "TextButtonStyle",
+                "Y": 2,
+                "TextId": "__SingleUse_SB1Q",
+                "TextRotation": "0",
+                "ColorReleased": {
+                  "Red": 196,
+                  "Green": 196,
+                  "Blue": 196
+                },
+                "ColorPressed": {
+                  "Red": 46,
+                  "Green": 46,
+                  "Blue": 46
+                }
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "tabButton1",
+            "X": 72,
+            "Y": 5,
+            "Width": 130,
+            "Height": 25,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "TextButtonStyle",
+                "Y": 2,
+                "TextId": "__SingleUse_IWPF",
+                "TextRotation": "0",
+                "ColorReleased": {
+                  "Red": 196,
+                  "Green": 196,
+                  "Blue": 196
+                },
+                "ColorPressed": {
+                  "Red": 46,
+                  "Green": 46,
+                  "Blue": 46
+                }
+              }
+            ]
+          },
+          {
+            "Type": "Container",
+            "Name": "tabContainer3",
+            "X": 65,
+            "Y": 30,
+            "Width": 410,
+            "Height": 285,
+            "Visible": false,
+            "Components": [
+              {
+                "Type": "TextArea",
+                "Name": "textArea1_1_1",
+                "X": 169,
+                "Y": 134,
+                "Width": 42,
+                "Height": 20,
+                "TextId": "__SingleUse_ZZ9X",
+                "TextRotation": "0",
+                "AutoSize": true
+              }
+            ]
+          },
+          {
+            "Type": "Container",
+            "Name": "tabContainer2",
+            "X": 65,
+            "Y": 30,
+            "Width": 410,
+            "Height": 285,
+            "Visible": false,
+            "Components": [
+              {
+                "Type": "Box",
+                "Name": "mechanicalPosBackground_1",
+                "X": 6,
+                "Y": 34,
+                "Width": 195,
+                "Height": 245,
+                "Color": {
+                  "Red": 64,
+                  "Green": 64,
+                  "Blue": 64
+                }
+              },
+              {
+                "Type": "Box",
+                "Name": "mechanicalPosBackground_1_1",
+                "X": 209,
+                "Y": 34,
+                "Width": 195,
+                "Height": 245,
+                "Color": {
+                  "Red": 64,
+                  "Green": 64,
+                  "Blue": 64
+                }
+              },
+              {
+                "Type": "CustomContainerInstance",
+                "Name": "labelBox_Half1",
+                "X": 6,
+                "Y": 6,
+                "Width": 195,
+                "Height": 25,
+                "CustomContainerDefinitionName": "LabelBox_Half"
+              },
+              {
+                "Type": "CustomContainerInstance",
+                "Name": "labelBox_Half1_1",
+                "X": 209,
+                "Y": 6,
+                "Width": 195,
+                "Height": 25,
+                "CustomContainerDefinitionName": "LabelBox_Half"
+              }
+            ]
+          },
+          {
+            "Type": "Container",
+            "Name": "tabContainer1",
+            "X": 65,
+            "Y": 30,
+            "Width": 410,
+            "Height": 285,
+            "Components": [
+              {
+                "Type": "Box",
+                "Name": "coordBackground",
+                "X": 6,
+                "Y": 34,
+                "Width": 398,
+                "Height": 70,
+                "Color": {
+                  "Red": 64,
+                  "Green": 64,
+                  "Blue": 64
+                }
+              },
+              {
+                "Type": "Box",
+                "Name": "voltageBackground",
+                "X": 234,
+                "Y": 139,
+                "Width": 170,
+                "Height": 140,
+                "Color": {
+                  "Red": 64,
+                  "Green": 64,
+                  "Blue": 64
+                }
+              },
+              {
+                "Type": "Box",
+                "Name": "mechanicalPosBackground",
+                "X": 6,
+                "Y": 139,
+                "Width": 220,
+                "Height": 140,
+                "Color": {
+                  "Red": 64,
+                  "Green": 64,
+                  "Blue": 64
+                }
+              },
+              {
+                "Type": "CustomContainerInstance",
+                "Name": "labelBox_Large1",
+                "X": 6,
+                "Y": 6,
+                "Width": 398,
+                "Height": 25,
+                "CustomContainerDefinitionName": "LabelBox_Large"
+              },
+              {
+                "Type": "CustomContainerInstance",
+                "Name": "labelBox_Medium1",
+                "X": 6,
+                "Y": 111,
+                "Width": 220,
+                "Height": 25,
+                "CustomContainerDefinitionName": "LabelBox_Medium"
+              },
+              {
+                "Type": "CustomContainerInstance",
+                "Name": "labelBox_Small1",
+                "X": 234,
+                "Y": 111,
+                "Width": 170,
+                "Height": 25,
+                "CustomContainerDefinitionName": "LabelBox_Small"
+              },
+              {
+                "Type": "TextArea",
+                "Name": "decCoordinates",
+                "X": 203,
+                "Y": 72,
+                "Width": 135,
+                "Height": 25,
+                "TextId": "__SingleUse_VF35",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 196,
+                  "Green": 196,
+                  "Blue": 196
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_P27V",
+                  "UseBuffer": true,
+                  "BufferSize": 24
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "raCoordinates",
+                "X": 210,
+                "Y": 42,
+                "Width": 135,
+                "Height": 25,
+                "TextId": "__SingleUse_Z6G6",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 196,
+                  "Green": 196,
+                  "Blue": 196
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_QV09",
+                  "UseBuffer": true,
+                  "BufferSize": 24
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "decCoordinatesLabel",
+                "X": 20,
+                "Y": 72,
+                "Width": 150,
+                "Height": 25,
+                "TextId": "__SingleUse_V0ZB",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 156,
+                  "Green": 156,
+                  "Blue": 156
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "raCoordinatesLabel",
+                "X": 20,
+                "Y": 42,
+                "Width": 150,
+                "Height": 25,
+                "TextId": "__SingleUse_IELA",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 156,
+                  "Green": 156,
+                  "Blue": 156
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "coordinatesLabel",
+                "X": 6,
+                "Y": 6,
+                "Width": 398,
+                "Height": 25,
+                "TextId": "__SingleUse_UQEU",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 196,
+                  "Green": 196,
+                  "Blue": 196
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "mechanicalPositionLabel",
+                "X": 6,
+                "Y": 111,
+                "Width": 220,
+                "Height": 25,
+                "TextId": "__SingleUse_I7VD",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 196,
+                  "Green": 196,
+                  "Blue": 196
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "decPosition",
+                "X": 145,
+                "Y": 245,
+                "Width": 75,
+                "Height": 25,
+                "TextId": "__SingleUse_HT27",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 196,
+                  "Green": 196,
+                  "Blue": 196
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_534R"
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "raPosition",
+                "X": 145,
+                "Y": 213,
+                "Width": 75,
+                "Height": 25,
+                "TextId": "__SingleUse_YOZD",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 196,
+                  "Green": 196,
+                  "Blue": 196
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_873Q"
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "azPosition",
+                "X": 145,
+                "Y": 181,
+                "Width": 75,
+                "Height": 25,
+                "TextId": "__SingleUse_4FJK",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 196,
+                  "Green": 196,
+                  "Blue": 196
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_VASJ"
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "altPosition",
+                "X": 145,
+                "Y": 149,
+                "Width": 75,
+                "Height": 25,
+                "TextId": "__SingleUse_Y65Y",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 196,
+                  "Green": 196,
+                  "Blue": 196
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_YWON"
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "decPosLabel",
+                "X": 20,
+                "Y": 245,
+                "Width": 125,
+                "Height": 25,
+                "TextId": "__SingleUse_AGM1",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 156,
+                  "Green": 156,
+                  "Blue": 156
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "raPosLabel",
+                "X": 20,
+                "Y": 213,
+                "Width": 125,
+                "Height": 25,
+                "TextId": "__SingleUse_PX1D",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 156,
+                  "Green": 156,
+                  "Blue": 156
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "azPosLabel",
+                "X": 20,
+                "Y": 181,
+                "Width": 125,
+                "Height": 25,
+                "TextId": "__SingleUse_USNJ",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 156,
+                  "Green": 156,
+                  "Blue": 156
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "altPosLabel",
+                "X": 20,
+                "Y": 149,
+                "Width": 125,
+                "Height": 25,
+                "TextId": "__SingleUse_ZWNT",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 156,
+                  "Green": 156,
+                  "Blue": 156
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "controllerVoltage",
+                "X": 248,
+                "Y": 240,
+                "Width": 75,
+                "Height": 25,
+                "TextId": "__SingleUse_4287",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 196,
+                  "Green": 196,
+                  "Blue": 196
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_6AW8"
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "deviceVoltage",
+                "X": 248,
+                "Y": 176,
+                "Width": 75,
+                "Height": 25,
+                "TextId": "__SingleUse_1D0A",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 196,
+                  "Green": 196,
+                  "Blue": 196
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_CG5D"
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "controllerLabel",
+                "X": 248,
+                "Y": 213,
+                "Width": 94,
+                "Height": 25,
+                "TextId": "__SingleUse_CBHW",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 156,
+                  "Green": 156,
+                  "Blue": 156
+                },
+                "WideTextAction": 1
+              },
+              {
+                "Type": "TextArea",
+                "Name": "deviceID",
+                "X": 248,
+                "Y": 149,
+                "Width": 90,
+                "Height": 25,
+                "TextId": "__SingleUse_WQJU",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 156,
+                  "Green": 156,
+                  "Blue": 156
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_7042"
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "voltageLabel",
+                "X": 234,
+                "Y": 111,
+                "Width": 170,
+                "Height": 25,
+                "TextId": "__SingleUse_WK6T",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 196,
+                  "Green": 196,
+                  "Blue": 196
+                }
+              }
+            ]
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "tabButton1",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "tabButton1"
+            },
+            "Action": {
+              "Type": "ActionMove",
+              "X": 72,
+              "Y": 5,
+              "Easing": "Linear",
+              "EasingOption": "InOut",
+              "ActionComponent": "menuTabSelected"
+            }
+          },
+          {
+            "InteractionName": "tabButton2",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "tabButton2"
+            },
+            "Action": {
+              "Type": "ActionMove",
+              "X": 205,
+              "Y": 5,
+              "Easing": "Linear",
+              "EasingOption": "InOut",
+              "ActionComponent": "menuTabSelected"
+            }
+          },
+          {
+            "InteractionName": "tabButton3",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "tabButton3"
+            },
+            "Action": {
+              "Type": "ActionMove",
+              "X": 337,
+              "Y": 5,
+              "Easing": "Linear",
+              "EasingOption": "InOut",
+              "ActionComponent": "menuTabSelected"
+            }
+          },
+          {
+            "InteractionName": "hideTab2_Tab1Active",
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "tabButton1"
+            },
+            "Action": {
+              "Type": "ActionHide",
+              "ActionComponent": "tabContainer2"
+            }
+          },
+          {
+            "InteractionName": "hideTab2_Tab3Active",
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "tabButton3"
+            },
+            "Action": {
+              "Type": "ActionHide",
+              "ActionComponent": "tabContainer2"
+            }
+          },
+          {
+            "InteractionName": "hideTab1_Tab2Active",
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "tabButton2"
+            },
+            "Action": {
+              "Type": "ActionHide",
+              "ActionComponent": "tabContainer1"
+            }
+          },
+          {
+            "InteractionName": "hideTab1_Tab3Active",
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "tabButton3"
+            },
+            "Action": {
+              "Type": "ActionHide",
+              "ActionComponent": "tabContainer1"
+            }
+          },
+          {
+            "InteractionName": "hideTab3_Tab1Active",
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "tabButton1"
+            },
+            "Action": {
+              "Type": "ActionHide",
+              "ActionComponent": "tabContainer3"
+            }
+          },
+          {
+            "InteractionName": "hideTab3_Tab2Active",
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "tabButton2"
+            },
+            "Action": {
+              "Type": "ActionHide",
+              "ActionComponent": "tabContainer3"
+            }
+          },
+          {
+            "InteractionName": "showTab1",
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "tabButton1"
+            },
+            "Action": {
+              "Type": "ActionShow",
+              "ActionComponent": "tabContainer1"
+            }
+          },
+          {
+            "InteractionName": "showTab2",
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "tabButton2"
+            },
+            "Action": {
+              "Type": "ActionShow",
+              "ActionComponent": "tabContainer2"
+            }
+          },
+          {
+            "InteractionName": "showTab3",
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "tabButton3"
+            },
+            "Action": {
+              "Type": "ActionShow",
+              "ActionComponent": "tabContainer3"
+            }
+          },
+          {
+            "InteractionName": "homeScreen",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "homeButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "HomeScreen"
+            }
+          },
+          {
+            "InteractionName": "gotoScreen",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "gotoButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "GotoScreen"
+            }
+          },
+          {
+            "InteractionName": "cameraScreen",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "cameraButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "CameraScreen"
+            }
+          },
+          {
+            "InteractionName": "settingsScreen",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "settingsButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "SettingsScreen"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "GotoScreen",
+        "CanvasBufferSize": 7200,
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "backgroundDark",
+            "X": 60,
+            "Width": 420,
+            "Height": 320,
+            "Color": {
+              "Red": 31,
+              "Green": 31,
+              "Blue": 31
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "backgroundLighter",
+            "X": 65,
+            "Y": 30,
+            "Width": 410,
+            "Height": 285,
+            "Color": {
+              "Red": 56,
+              "Green": 56,
+              "Blue": 56
+            }
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "backgroundMask",
+            "X": 60,
+            "Width": 420,
+            "Height": 320,
+            "CustomContainerDefinitionName": "BackgroundMask"
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "settingsButton",
+            "Y": 256,
+            "Width": 60,
+            "Height": 64,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "IconButtonStyle",
+                "X": 13,
+                "Y": 15,
+                "IconReleased": "__generated\\icon_theme_images_action_settings_35_35_E8F6FB.svg.png",
+                "IconPressed": "__generated\\icon_theme_images_action_settings_35_35_E8F6FB.svg.png"
+              },
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 60,
+                "Height": 64,
+                "LockToFlexButtonSize": true,
+                "ColorReleased": {
+                  "Red": 79,
+                  "Green": 79,
+                  "Blue": 79
+                },
+                "ColorPressed": {
+                  "Red": 48,
+                  "Green": 48,
+                  "Blue": 48
+                }
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "cameraButton",
+            "Y": 192,
+            "Width": 60,
+            "Height": 64,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "IconButtonStyle",
+                "X": 13,
+                "Y": 16,
+                "IconReleased": "__generated\\icon_theme_images_image_photo_camera_35_35_E8F6FB.svg.png",
+                "IconPressed": "__generated\\icon_theme_images_image_photo_camera_35_35_E8F6FB.svg.png"
+              },
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 60,
+                "Height": 64,
+                "LockToFlexButtonSize": true,
+                "ColorReleased": {
+                  "Red": 79,
+                  "Green": 79,
+                  "Blue": 79
+                },
+                "ColorPressed": {
+                  "Red": 48,
+                  "Green": 48,
+                  "Blue": 48
+                }
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "gotoButton",
+            "Y": 128,
+            "Width": 60,
+            "Height": 64,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "IconButtonStyle",
+                "X": 13,
+                "Y": 15,
+                "IconReleased": "__generated\\icon_theme_images_action_open_with_35_35_E8F6FB.svg.png",
+                "IconPressed": "__generated\\icon_theme_images_action_open_with_35_35_E8F6FB.svg.png"
+              },
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 60,
+                "Height": 64,
+                "LockToFlexButtonSize": true,
+                "ColorReleased": {
+                  "Red": 48,
+                  "Green": 48,
+                  "Blue": 48
+                },
+                "ColorPressed": {
+                  "Red": 48,
+                  "Green": 48,
+                  "Blue": 48
+                }
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "telemetryButton",
+            "Y": 64,
+            "Width": 60,
+            "Height": 64,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "IconButtonStyle",
+                "X": 13,
+                "Y": 14,
+                "IconReleased": "__generated\\icon_theme_images_action_assessment_35_35_E8F6FB.svg.png",
+                "IconPressed": "__generated\\icon_theme_images_action_assessment_35_35_E8F6FB.svg.png"
+              },
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 60,
+                "Height": 64,
+                "LockToFlexButtonSize": true,
+                "ColorReleased": {
+                  "Red": 79,
+                  "Green": 79,
+                  "Blue": 79
+                },
+                "ColorPressed": {
+                  "Red": 48,
+                  "Green": 48,
+                  "Blue": 48
+                }
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "homeButton",
+            "Width": 60,
+            "Height": 64,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "IconButtonStyle",
+                "X": 13,
+                "Y": 14,
+                "IconReleased": "__generated\\icon_theme_images_action_home_filled_35_35_E8F6FB.svg.png",
+                "IconPressed": "__generated\\icon_theme_images_action_home_filled_35_35_E8F6FB.svg.png"
+              },
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 60,
+                "Height": 64,
+                "LockToFlexButtonSize": true,
+                "ColorReleased": {
+                  "Red": 79,
+                  "Green": 79,
+                  "Blue": 79
+                },
+                "ColorPressed": {
+                  "Red": 48,
+                  "Green": 48,
+                  "Blue": 48
+                }
+              }
+            ]
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "menuTab2",
+            "X": 272,
+            "Y": 5,
+            "Width": 195,
+            "Height": 25,
+            "CustomContainerDefinitionName": "MenuTabDark1_2"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "menuTab1",
+            "X": 73,
+            "Y": 5,
+            "Width": 195,
+            "Height": 25,
+            "CustomContainerDefinitionName": "MenuTabDark1_2"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "menuTabSelected",
+            "X": 73,
+            "Y": 5,
+            "Width": 195,
+            "Height": 25,
+            "CustomContainerDefinitionName": "MenuTabLight1_2"
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "tabButton2",
+            "X": 272,
+            "Y": 5,
+            "Width": 195,
+            "Height": 25,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "TextButtonStyle",
+                "Y": 2,
+                "TextId": "__SingleUse_KFAU",
+                "TextRotation": "0",
+                "ColorReleased": {
+                  "Red": 196,
+                  "Green": 196,
+                  "Blue": 196
+                },
+                "ColorPressed": {
+                  "Red": 46,
+                  "Green": 46,
+                  "Blue": 46
+                }
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "tabButton1",
+            "X": 73,
+            "Y": 5,
+            "Width": 195,
+            "Height": 25,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "TextButtonStyle",
+                "Y": 2,
+                "TextId": "__SingleUse_865S",
+                "TextRotation": "0",
+                "ColorReleased": {
+                  "Red": 196,
+                  "Green": 196,
+                  "Blue": 196
+                },
+                "ColorPressed": {
+                  "Red": 46,
+                  "Green": 46,
+                  "Blue": 46
+                }
+              }
+            ]
+          },
+          {
+            "Type": "Container",
+            "Name": "tabContainer2",
+            "X": 65,
+            "Y": 30,
+            "Width": 410,
+            "Height": 285,
+            "Visible": false,
+            "Components": [
+              {
+                "Type": "TextArea",
+                "Name": "textArea1",
+                "X": 169,
+                "Y": 134,
+                "Width": 42,
+                "Height": 20,
+                "TextId": "__SingleUse_8LF5",
+                "TextRotation": "0",
+                "AutoSize": true
+              }
+            ]
+          },
+          {
+            "Type": "Container",
+            "Name": "tabContainer1",
+            "X": 65,
+            "Y": 30,
+            "Width": 410,
+            "Height": 285,
+            "Components": [
+              {
+                "Type": "CustomContainerInstance",
+                "Name": "backgroundSmallRADEC_DEC",
+                "X": 6,
+                "Y": 103,
+                "Width": 89,
+                "Height": 90,
+                "CustomContainerDefinitionName": "BackgroundSmallRADEC"
+              },
+              {
+                "Type": "CustomContainerInstance",
+                "Name": "backgroundLargeRADEC_DEC",
+                "X": 98,
+                "Y": 103,
+                "Width": 306,
+                "Height": 90,
+                "CustomContainerDefinitionName": "BackgroundLargeRADEC"
+              },
+              {
+                "Type": "CustomContainerInstance",
+                "Name": "backgroundSmallRADEC_RA",
+                "X": 6,
+                "Y": 6,
+                "Width": 89,
+                "Height": 90,
+                "CustomContainerDefinitionName": "BackgroundSmallRADEC"
+              },
+              {
+                "Type": "CustomContainerInstance",
+                "Name": "backgroundLargeRADEC_RA",
+                "X": 98,
+                "Y": 6,
+                "Width": 306,
+                "Height": 90,
+                "CustomContainerDefinitionName": "BackgroundLargeRADEC"
+              },
+              {
+                "Type": "CustomContainerInstance",
+                "Name": "rA_Label1",
+                "X": 6,
+                "Y": 6,
+                "Width": 89,
+                "Height": 90,
+                "CustomContainerDefinitionName": "RA_Label"
+              },
+              {
+                "Type": "CustomContainerInstance",
+                "Name": "dEC_Label1",
+                "X": 6,
+                "Y": 103,
+                "Width": 89,
+                "Height": 90,
+                "CustomContainerDefinitionName": "DEC_Label"
+              },
+              {
+                "Type": "CustomContainerInstance",
+                "Name": "wheelSelected",
+                "X": 127,
+                "Y": 14,
+                "Width": 60,
+                "Height": 74,
+                "CustomContainerDefinitionName": "wheelSelected"
+              },
+              {
+                "Type": "CustomContainerInstance",
+                "Name": "decSignSelected",
+                "X": 105,
+                "Y": 111,
+                "Width": 20,
+                "Height": 74,
+                "Visible": false,
+                "CustomContainerDefinitionName": "signSelected"
+              },
+              {
+                "Type": "ScrollWheel",
+                "Name": "scrollWheelRA_S",
+                "X": 313,
+                "Y": 14,
+                "Width": 60,
+                "Height": 74,
+                "IsCircular": true,
+                "ItemTemplateName": "Wheel_RADEC",
+                "NumberofItems": 60,
+                "Easing": "Back",
+                "EasingOption": "Out",
+                "SwipeAcceleration": 1.0,
+                "DragAcceleration": 1.0,
+                "OverShootPercentage": 75
+              },
+              {
+                "Type": "ScrollWheel",
+                "Name": "scrollWheelRA_M",
+                "X": 218,
+                "Y": 14,
+                "Width": 60,
+                "Height": 74,
+                "IsCircular": true,
+                "ItemTemplateName": "Wheel_RADEC",
+                "NumberofItems": 60,
+                "Easing": "Back",
+                "EasingOption": "Out",
+                "SwipeAcceleration": 1.0,
+                "DragAcceleration": 1.0,
+                "OverShootPercentage": 75
+              },
+              {
+                "Type": "ScrollWheel",
+                "Name": "scrollWheelRA_H",
+                "X": 127,
+                "Y": 14,
+                "Width": 60,
+                "Height": 74,
+                "IsCircular": true,
+                "ItemTemplateName": "Wheel_RADEC",
+                "NumberofItems": 24,
+                "InitialElement": 6,
+                "Easing": "Back",
+                "EasingOption": "Out",
+                "SwipeAcceleration": 1.0,
+                "DragAcceleration": 1.0,
+                "OverShootPercentage": 75
+              },
+              {
+                "Type": "TextArea",
+                "Name": "hours",
+                "X": 187,
+                "Y": 33,
+                "Width": 20,
+                "Height": 37,
+                "TextId": "__SingleUse_4TP0",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 196,
+                  "Green": 196,
+                  "Blue": 196
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "minutes",
+                "X": 278,
+                "Y": 33,
+                "Width": 30,
+                "Height": 37,
+                "TextId": "__SingleUse_J5IB",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 196,
+                  "Green": 196,
+                  "Blue": 196
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "seconds",
+                "X": 373,
+                "Y": 33,
+                "Width": 18,
+                "Height": 37,
+                "TextId": "__SingleUse_ZQC0",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 196,
+                  "Green": 196,
+                  "Blue": 196
+                }
+              },
+              {
+                "Type": "ScrollWheel",
+                "Name": "scrollWheelDEC_S",
+                "X": 313,
+                "Y": 111,
+                "Width": 60,
+                "Height": 74,
+                "IsCircular": true,
+                "ItemTemplateName": "Wheel_RADEC",
+                "NumberofItems": 60,
+                "InitialElement": 60,
+                "Easing": "Back",
+                "EasingOption": "Out",
+                "SwipeAcceleration": 1.0,
+                "DragAcceleration": 1.0,
+                "OverShootPercentage": 75
+              },
+              {
+                "Type": "ScrollWheel",
+                "Name": "scrollWheelDEC_M",
+                "X": 218,
+                "Y": 111,
+                "Width": 60,
+                "Height": 74,
+                "IsCircular": true,
+                "ItemTemplateName": "Wheel_RADEC",
+                "NumberofItems": 60,
+                "InitialElement": 60,
+                "Easing": "Back",
+                "EasingOption": "Out",
+                "SwipeAcceleration": 1.0,
+                "DragAcceleration": 1.0,
+                "OverShootPercentage": 75
+              },
+              {
+                "Type": "ScrollWheel",
+                "Name": "scrollWheelDEC_D",
+                "X": 127,
+                "Y": 111,
+                "Width": 60,
+                "Height": 74,
+                "IsCircular": true,
+                "ItemTemplateName": "Wheel_RADEC",
+                "NumberofItems": 91,
+                "InitialElement": 90,
+                "Easing": "Back",
+                "EasingOption": "Out",
+                "SwipeAcceleration": 1.0,
+                "DragAcceleration": 1.0,
+                "OverShootPercentage": 75
+              },
+              {
+                "Type": "FlexButton",
+                "Name": "decDegSign",
+                "X": 105,
+                "Y": 111,
+                "Width": 20,
+                "Height": 74,
+                "ButtonTrigger": {
+                  "Type": "ClickButtonTrigger"
+                },
+                "ButtonStyles": [
+                  {
+                    "Type": "TextButtonStyle",
+                    "Y": 11,
+                    "TextId": "__SingleUse_ABDJ",
+                    "TextRotation": "0",
+                    "Wildcard1": {
+                      "TextId": "__SingleUse_WSEV",
+                      "UseBuffer": true,
+                      "BufferSize": 2
+                    },
+                    "ColorReleased": {
+                      "Red": 196,
+                      "Green": 196,
+                      "Blue": 196
+                    },
+                    "ColorPressed": {
+                      "Red": 196,
+                      "Green": 196,
+                      "Blue": 196
+                    }
+                  }
+                ]
+              },
+              {
+                "Type": "TextArea",
+                "Name": "degrees",
+                "X": 186,
+                "Y": 113,
+                "Width": 14,
+                "Height": 39,
+                "TextId": "__SingleUse_RMBF",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 196,
+                  "Green": 196,
+                  "Blue": 196
+                },
+                "AutoSize": true
+              },
+              {
+                "Type": "TextArea",
+                "Name": "arcmin",
+                "X": 277,
+                "Y": 113,
+                "Width": 15,
+                "Height": 39,
+                "TextId": "__SingleUse_73VA",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 196,
+                  "Green": 196,
+                  "Blue": 196
+                },
+                "AutoSize": true
+              },
+              {
+                "Type": "TextArea",
+                "Name": "arcsec",
+                "X": 374,
+                "Y": 113,
+                "Width": 7,
+                "Height": 39,
+                "TextId": "__SingleUse_LDWD",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 196,
+                  "Green": 196,
+                  "Blue": 196
+                },
+                "AutoSize": true
+              },
+              {
+                "Type": "FlexButton",
+                "Name": "sendGotoCommand",
+                "X": 6,
+                "Y": 200,
+                "Width": 398,
+                "Height": 79,
+                "ButtonTrigger": {
+                  "Type": "ClickButtonTrigger"
+                },
+                "ButtonStyles": [
+                  {
+                    "Type": "TextButtonStyle",
+                    "Y": 11,
+                    "TextId": "__SingleUse_4AUV",
+                    "TextRotation": "0",
+                    "ColorReleased": {
+                      "Red": 196,
+                      "Green": 196,
+                      "Blue": 196
+                    },
+                    "ColorPressed": {
+                      "Red": 115,
+                      "Green": 115,
+                      "Blue": 115
+                    }
+                  },
+                  {
+                    "Type": "BoxWithBorderButtonStyle",
+                    "Width": 398,
+                    "Height": 79,
+                    "ColorReleased": {
+                      "Red": 64,
+                      "Green": 64,
+                      "Blue": 64
+                    },
+                    "ColorPressed": {
+                      "Red": 43,
+                      "Green": 43,
+                      "Blue": 43
+                    },
+                    "ColorBorderReleased": {
+                      "Red": 79,
+                      "Green": 79,
+                      "Blue": 79
+                    },
+                    "ColorBorderPressed": {
+                      "Red": 79,
+                      "Green": 79,
+                      "Blue": 79
+                    }
+                  }
+                ]
+              },
+              {
+                "Type": "CustomContainerInstance",
+                "Name": "gotoButtonMask",
+                "X": 6,
+                "Y": 200,
+                "Width": 398,
+                "Height": 79,
+                "CustomContainerDefinitionName": "GotoButtonMask"
+              }
+            ]
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "tabButton1",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "tabButton1"
+            },
+            "Action": {
+              "Type": "ActionMove",
+              "X": 73,
+              "Y": 5,
+              "Easing": "Linear",
+              "EasingOption": "InOut",
+              "ActionComponent": "menuTabSelected"
+            }
+          },
+          {
+            "InteractionName": "tabButton2",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "tabButton2"
+            },
+            "Action": {
+              "Type": "ActionMove",
+              "X": 272,
+              "Y": 5,
+              "Easing": "Linear",
+              "EasingOption": "InOut",
+              "ActionComponent": "menuTabSelected"
+            }
+          },
+          {
+            "InteractionName": "hideTab2_Tab1Active",
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "tabButton1"
+            },
+            "Action": {
+              "Type": "ActionHide",
+              "ActionComponent": "tabContainer2"
+            }
+          },
+          {
+            "InteractionName": "hideTab1_Tab2Active",
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "tabButton2"
+            },
+            "Action": {
+              "Type": "ActionHide",
+              "ActionComponent": "tabContainer1"
+            }
+          },
+          {
+            "InteractionName": "showTab1",
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "tabButton1"
+            },
+            "Action": {
+              "Type": "ActionShow",
+              "ActionComponent": "tabContainer1"
+            }
+          },
+          {
+            "InteractionName": "showTab2",
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "tabButton2"
+            },
+            "Action": {
+              "Type": "ActionShow",
+              "ActionComponent": "tabContainer2"
+            }
+          },
+          {
+            "InteractionName": "homeScreen",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "homeButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "HomeScreen"
+            }
+          },
+          {
+            "InteractionName": "telemetryScreen",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "telemetryButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "TelemetryScreen"
+            }
+          },
+          {
+            "InteractionName": "cameraScreen",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "cameraButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "CameraScreen"
+            }
+          },
+          {
+            "InteractionName": "settingsScreen",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "settingsButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "SettingsScreen"
+            }
+          },
+          {
+            "InteractionName": "incrementValue",
+            "Trigger": {
+              "Type": "TriggerPhysicalButtonClicked",
+              "ButtonKey": 43
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "incrementValue"
+            }
+          },
+          {
+            "InteractionName": "decrementValue",
+            "Trigger": {
+              "Type": "TriggerPhysicalButtonClicked",
+              "ButtonKey": 45
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "decrementValue"
+            }
+          },
+          {
+            "InteractionName": "setNextActiveInput",
+            "Trigger": {
+              "Type": "TriggerPhysicalButtonClicked",
+              "ButtonKey": 42
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "setNextActiveInput"
+            }
+          },
+          {
+            "InteractionName": "toggleDecSign",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "decDegSign"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "toggleDecSign"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "CameraScreen",
+        "CanvasBufferSize": 7200,
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "mechanicalPosBackground_1",
+            "X": 71,
+            "Y": 64,
+            "Width": 195,
+            "Height": 245,
+            "Color": {
+              "Red": 64,
+              "Green": 64,
+              "Blue": 64
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "backgroundDark",
+            "X": 60,
+            "Width": 420,
+            "Height": 320,
+            "Color": {
+              "Red": 31,
+              "Green": 31,
+              "Blue": 31
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "backgroundLighter",
+            "X": 65,
+            "Y": 30,
+            "Width": 410,
+            "Height": 285,
+            "Color": {
+              "Red": 56,
+              "Green": 56,
+              "Blue": 56
+            }
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "backgroundMask1",
+            "X": 60,
+            "Width": 420,
+            "Height": 320,
+            "CustomContainerDefinitionName": "BackgroundMask"
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "settingsButton",
+            "Y": 256,
+            "Width": 60,
+            "Height": 64,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "IconButtonStyle",
+                "X": 13,
+                "Y": 15,
+                "IconReleased": "__generated\\icon_theme_images_action_settings_35_35_E8F6FB.svg.png",
+                "IconPressed": "__generated\\icon_theme_images_action_settings_35_35_E8F6FB.svg.png"
+              },
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 60,
+                "Height": 64,
+                "LockToFlexButtonSize": true,
+                "ColorReleased": {
+                  "Red": 79,
+                  "Green": 79,
+                  "Blue": 79
+                },
+                "ColorPressed": {
+                  "Red": 48,
+                  "Green": 48,
+                  "Blue": 48
+                }
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "cameraButton",
+            "Y": 192,
+            "Width": 60,
+            "Height": 64,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "IconButtonStyle",
+                "X": 13,
+                "Y": 16,
+                "IconReleased": "__generated\\icon_theme_images_image_photo_camera_35_35_E8F6FB.svg.png",
+                "IconPressed": "__generated\\icon_theme_images_image_photo_camera_35_35_E8F6FB.svg.png"
+              },
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 60,
+                "Height": 64,
+                "LockToFlexButtonSize": true,
+                "ColorReleased": {
+                  "Red": 48,
+                  "Green": 48,
+                  "Blue": 48
+                },
+                "ColorPressed": {
+                  "Red": 48,
+                  "Green": 48,
+                  "Blue": 48
+                }
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "gotoButton",
+            "Y": 128,
+            "Width": 60,
+            "Height": 64,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "IconButtonStyle",
+                "X": 13,
+                "Y": 15,
+                "IconReleased": "__generated\\icon_theme_images_action_open_with_35_35_E8F6FB.svg.png",
+                "IconPressed": "__generated\\icon_theme_images_action_open_with_35_35_E8F6FB.svg.png"
+              },
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 60,
+                "Height": 64,
+                "LockToFlexButtonSize": true,
+                "ColorReleased": {
+                  "Red": 79,
+                  "Green": 79,
+                  "Blue": 79
+                },
+                "ColorPressed": {
+                  "Red": 48,
+                  "Green": 48,
+                  "Blue": 48
+                }
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "telemetryButton",
+            "Y": 64,
+            "Width": 60,
+            "Height": 64,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "IconButtonStyle",
+                "X": 13,
+                "Y": 14,
+                "IconReleased": "__generated\\icon_theme_images_action_assessment_35_35_E8F6FB.svg.png",
+                "IconPressed": "__generated\\icon_theme_images_action_assessment_35_35_E8F6FB.svg.png"
+              },
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 60,
+                "Height": 64,
+                "LockToFlexButtonSize": true,
+                "ColorReleased": {
+                  "Red": 79,
+                  "Green": 79,
+                  "Blue": 79
+                },
+                "ColorPressed": {
+                  "Red": 48,
+                  "Green": 48,
+                  "Blue": 48
+                }
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "homeButton",
+            "Width": 60,
+            "Height": 64,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "IconButtonStyle",
+                "X": 13,
+                "Y": 14,
+                "IconReleased": "__generated\\icon_theme_images_action_home_filled_35_35_E8F6FB.svg.png",
+                "IconPressed": "__generated\\icon_theme_images_action_home_filled_35_35_E8F6FB.svg.png"
+              },
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 60,
+                "Height": 64,
+                "LockToFlexButtonSize": true,
+                "ColorReleased": {
+                  "Red": 79,
+                  "Green": 79,
+                  "Blue": 79
+                },
+                "ColorPressed": {
+                  "Red": 48,
+                  "Green": 48,
+                  "Blue": 48
+                }
+              }
+            ]
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "menuTabLight11",
+            "X": 73,
+            "Y": 5,
+            "Width": 394,
+            "Height": 25,
+            "CustomContainerDefinitionName": "MenuTabLight1"
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "tabButton1",
+            "X": 73,
+            "Y": 5,
+            "Width": 394,
+            "Height": 25,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "TextButtonStyle",
+                "Y": 2,
+                "TextId": "__SingleUse_A5F4",
+                "TextRotation": "0",
+                "ColorReleased": {
+                  "Red": 196,
+                  "Green": 196,
+                  "Blue": 196
+                },
+                "ColorPressed": {
+                  "Red": 46,
+                  "Green": 46,
+                  "Blue": 46
+                }
+              }
+            ]
+          },
+          {
+            "Type": "Container",
+            "Name": "tabContainer3",
+            "X": 65,
+            "Y": 30,
+            "Width": 410,
+            "Height": 285,
+            "Visible": false,
+            "Components": [
+              {
+                "Type": "TextArea",
+                "Name": "textArea1_1_1",
+                "X": 169,
+                "Y": 134,
+                "Width": 42,
+                "Height": 20,
+                "TextId": "__SingleUse_4VS0",
+                "TextRotation": "0",
+                "AutoSize": true
+              }
+            ]
+          },
+          {
+            "Type": "Container",
+            "Name": "tabContainer2",
+            "X": 65,
+            "Y": 30,
+            "Width": 410,
+            "Height": 285,
+            "Visible": false,
+            "Components": [
+              {
+                "Type": "TextArea",
+                "Name": "textArea1_1",
+                "X": 169,
+                "Y": 134,
+                "Width": 42,
+                "Height": 20,
+                "TextId": "__SingleUse_N23J",
+                "TextRotation": "0",
+                "AutoSize": true
+              }
+            ]
+          },
+          {
+            "Type": "Container",
+            "Name": "tabContainer1",
+            "X": 65,
+            "Y": 30,
+            "Width": 410,
+            "Height": 285,
+            "Components": [
+              {
+                "Type": "Box",
+                "Name": "mechanicalPosBackground_1_1",
+                "X": 209,
+                "Y": 34,
+                "Width": 195,
+                "Height": 90,
+                "Color": {
+                  "Red": 64,
+                  "Green": 64,
+                  "Blue": 64
+                }
+              },
+              {
+                "Type": "Box",
+                "Name": "mechanicalPosBackground_1_1_1",
+                "X": 6,
+                "Y": 34,
+                "Width": 195,
+                "Height": 90,
+                "Color": {
+                  "Red": 64,
+                  "Green": 64,
+                  "Blue": 64
+                }
+              },
+              {
+                "Type": "Box",
+                "Name": "mechanicalPosBackground_1_1_1_1",
+                "X": 6,
+                "Y": 131,
+                "Width": 195,
+                "Height": 64,
+                "Color": {
+                  "Red": 64,
+                  "Green": 64,
+                  "Blue": 64
+                }
+              },
+              {
+                "Type": "Box",
+                "Name": "mechanicalPosBackground_1_1_1_1_1",
+                "X": 209,
+                "Y": 131,
+                "Width": 195,
+                "Height": 64,
+                "Color": {
+                  "Red": 64,
+                  "Green": 64,
+                  "Blue": 64
+                }
+              },
+              {
+                "Type": "CustomContainerInstance",
+                "Name": "labelBox_Half2",
+                "X": 209,
+                "Y": 6,
+                "Width": 195,
+                "Height": 25,
+                "CustomContainerDefinitionName": "LabelBox_Half"
+              },
+              {
+                "Type": "CustomContainerInstance",
+                "Name": "labelBox_Half1",
+                "X": 6,
+                "Y": 6,
+                "Width": 195,
+                "Height": 25,
+                "CustomContainerDefinitionName": "LabelBox_Half"
+              },
+              {
+                "Type": "ScrollWheel",
+                "Name": "scrollWheelSec",
+                "X": 112,
+                "Y": 42,
+                "Width": 60,
+                "Height": 74,
+                "IsCircular": true,
+                "ItemTemplateName": "Wheel_RADEC",
+                "NumberofItems": 60,
+                "Easing": "Back",
+                "EasingOption": "Out",
+                "SwipeAcceleration": 1.0,
+                "DragAcceleration": 1.0,
+                "OverShootPercentage": 75
+              },
+              {
+                "Type": "ScrollWheel",
+                "Name": "scrollWheelMin",
+                "X": 19,
+                "Y": 42,
+                "Width": 60,
+                "Height": 74,
+                "IsCircular": true,
+                "ItemTemplateName": "Wheel_RADEC",
+                "NumberofItems": 60,
+                "Easing": "Back",
+                "EasingOption": "Out",
+                "SwipeAcceleration": 1.0,
+                "DragAcceleration": 1.0,
+                "OverShootPercentage": 75
+              },
+              {
+                "Type": "TextArea",
+                "Name": "minutes",
+                "X": 77,
+                "Y": 61,
+                "Width": 30,
+                "Height": 37,
+                "TextId": "__SingleUse_MBPU",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 196,
+                  "Green": 196,
+                  "Blue": 196
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "seconds",
+                "X": 170,
+                "Y": 61,
+                "Width": 18,
+                "Height": 37,
+                "TextId": "__SingleUse_ECRS",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 196,
+                  "Green": 196,
+                  "Blue": 196
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "mechanicalPositionLabel_1",
+                "X": 6,
+                "Y": 6,
+                "Width": 195,
+                "Height": 25,
+                "TextId": "__SingleUse_8YJ7",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 196,
+                  "Green": 196,
+                  "Blue": 196
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "mechanicalPositionLabel_1_2",
+                "X": 6,
+                "Y": 136,
+                "Width": 195,
+                "Height": 25,
+                "TextId": "__SingleUse_5KOU",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 156,
+                  "Green": 156,
+                  "Blue": 156
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "totalExposure",
+                "X": 36,
+                "Y": 164,
+                "Width": 135,
+                "Height": 25,
+                "TextId": "__SingleUse_MXUE",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 196,
+                  "Green": 196,
+                  "Blue": 196
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_0CL8",
+                  "UseBuffer": true,
+                  "BufferSize": 24
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "totalExposure_1",
+                "X": 239,
+                "Y": 164,
+                "Width": 135,
+                "Height": 25,
+                "TextId": "__SingleUse_MO6T",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 196,
+                  "Green": 196,
+                  "Blue": 196
+                },
+                "Wildcard1": {
+                  "TextId": "__SingleUse_F55N",
+                  "UseBuffer": true,
+                  "BufferSize": 5
+                },
+                "Wildcard2": {
+                  "TextId": "__SingleUse_LZIA",
+                  "UseBuffer": true,
+                  "BufferSize": 5
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "mechanicalPositionLabel_1_2_1",
+                "X": 209,
+                "Y": 136,
+                "Width": 195,
+                "Height": 25,
+                "TextId": "__SingleUse_1AS1",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 156,
+                  "Green": 156,
+                  "Blue": 156
+                }
+              },
+              {
+                "Type": "TextArea",
+                "Name": "mechanicalPositionLabel_1_1",
+                "X": 209,
+                "Y": 6,
+                "Width": 195,
+                "Height": 25,
+                "TextId": "__SingleUse_GNFU",
+                "TextRotation": "0",
+                "Color": {
+                  "Red": 196,
+                  "Green": 196,
+                  "Blue": 196
+                }
+              },
+              {
+                "Type": "CustomContainerInstance",
+                "Name": "camSelected1",
+                "X": 226,
+                "Y": 42,
+                "Width": 40,
+                "Height": 74,
+                "CustomContainerDefinitionName": "camSelected"
+              },
+              {
+                "Type": "ScrollWheel",
+                "Name": "scrollWheel1",
+                "X": 346,
+                "Y": 42,
+                "Width": 40,
+                "Height": 74,
+                "IsCircular": true,
+                "ItemTemplateName": "Wheel_CAM",
+                "NumberofItems": 10,
+                "Easing": "Back",
+                "EasingOption": "Out",
+                "SwipeAcceleration": 1.0,
+                "DragAcceleration": 1.0,
+                "OverShootPercentage": 75
+              },
+              {
+                "Type": "ScrollWheel",
+                "Name": "scrollWheel10",
+                "X": 306,
+                "Y": 42,
+                "Width": 40,
+                "Height": 74,
+                "IsCircular": true,
+                "ItemTemplateName": "Wheel_CAM",
+                "NumberofItems": 10,
+                "Easing": "Back",
+                "EasingOption": "Out",
+                "SwipeAcceleration": 1.0,
+                "DragAcceleration": 1.0,
+                "OverShootPercentage": 75
+              },
+              {
+                "Type": "ScrollWheel",
+                "Name": "scrollWheel100",
+                "X": 266,
+                "Y": 42,
+                "Width": 40,
+                "Height": 74,
+                "IsCircular": true,
+                "ItemTemplateName": "Wheel_CAM",
+                "NumberofItems": 10,
+                "Easing": "Back",
+                "EasingOption": "Out",
+                "SwipeAcceleration": 1.0,
+                "DragAcceleration": 1.0,
+                "OverShootPercentage": 75
+              },
+              {
+                "Type": "ScrollWheel",
+                "Name": "scrollWheel1000",
+                "X": 226,
+                "Y": 42,
+                "Width": 40,
+                "Height": 74,
+                "IsCircular": true,
+                "ItemTemplateName": "Wheel_CAM",
+                "NumberofItems": 10,
+                "Easing": "Back",
+                "EasingOption": "Out",
+                "SwipeAcceleration": 1.0,
+                "DragAcceleration": 1.0,
+                "OverShootPercentage": 75
+              },
+              {
+                "Type": "CustomContainerInstance",
+                "Name": "wheelSelected1",
+                "X": 19,
+                "Y": 42,
+                "Width": 60,
+                "Height": 74,
+                "CustomContainerDefinitionName": "wheelSelected"
+              },
+              {
+                "Type": "FlexButton",
+                "Name": "flexButton1",
+                "X": 6,
+                "Y": 202,
+                "Width": 195,
+                "Height": 77,
+                "ButtonTrigger": {
+                  "Type": "ClickButtonTrigger"
+                },
+                "ButtonStyles": [
+                  {
+                    "Type": "TextButtonStyle",
+                    "Y": 13,
+                    "TextId": "__SingleUse_LL8A",
+                    "TextRotation": "0",
+                    "ColorReleased": {
+                      "Red": 196,
+                      "Green": 196,
+                      "Blue": 196
+                    },
+                    "ColorPressed": {
+                      "Red": 115,
+                      "Green": 115,
+                      "Blue": 115
+                    }
+                  },
+                  {
+                    "Type": "BoxWithBorderButtonStyle",
+                    "Width": 195,
+                    "Height": 77,
+                    "LockToFlexButtonSize": true,
+                    "ColorReleased": {
+                      "Red": 64,
+                      "Green": 64,
+                      "Blue": 64
+                    },
+                    "ColorPressed": {
+                      "Red": 43,
+                      "Green": 43,
+                      "Blue": 43
+                    },
+                    "ColorBorderReleased": {
+                      "Red": 64,
+                      "Green": 64,
+                      "Blue": 64
+                    },
+                    "ColorBorderPressed": {
+                      "Red": 43,
+                      "Green": 43,
+                      "Blue": 43
+                    }
+                  }
+                ]
+              },
+              {
+                "Type": "FlexButton",
+                "Name": "flexButton1_1",
+                "X": 209,
+                "Y": 202,
+                "Width": 195,
+                "Height": 77,
+                "ButtonTrigger": {
+                  "Type": "ClickButtonTrigger"
+                },
+                "ButtonStyles": [
+                  {
+                    "Type": "TextButtonStyle",
+                    "Y": 13,
+                    "TextId": "__SingleUse_KVNA",
+                    "TextRotation": "0",
+                    "ColorReleased": {
+                      "Red": 196,
+                      "Green": 196,
+                      "Blue": 196
+                    },
+                    "ColorPressed": {
+                      "Red": 115,
+                      "Green": 115,
+                      "Blue": 115
+                    }
+                  },
+                  {
+                    "Type": "BoxWithBorderButtonStyle",
+                    "Width": 195,
+                    "Height": 77,
+                    "LockToFlexButtonSize": true,
+                    "ColorReleased": {
+                      "Red": 64,
+                      "Green": 64,
+                      "Blue": 64
+                    },
+                    "ColorPressed": {
+                      "Red": 43,
+                      "Green": 43,
+                      "Blue": 43
+                    },
+                    "ColorBorderReleased": {
+                      "Red": 64,
+                      "Green": 64,
+                      "Blue": 64
+                    },
+                    "ColorBorderPressed": {
+                      "Red": 43,
+                      "Green": 43,
+                      "Blue": 43
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "homeScreen",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "homeButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "HomeScreen"
+            }
+          },
+          {
+            "InteractionName": "telemetryScreen",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "telemetryButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "TelemetryScreen"
+            }
+          },
+          {
+            "InteractionName": "gotoScreen",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "gotoButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "GotoScreen"
+            }
+          },
+          {
+            "InteractionName": "settingsScreen",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "settingsButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "SettingsScreen"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "SettingsScreen",
+        "CanvasBufferSize": 7200,
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "backgroundDark",
+            "X": 60,
+            "Width": 420,
+            "Height": 320,
+            "Color": {
+              "Red": 31,
+              "Green": 31,
+              "Blue": 31
+            }
+          },
+          {
+            "Type": "Box",
+            "Name": "backgroundLighter",
+            "X": 65,
+            "Y": 30,
+            "Width": 410,
+            "Height": 285,
+            "Color": {
+              "Red": 56,
+              "Green": 56,
+              "Blue": 56
+            }
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "backgroundMask1",
+            "X": 60,
+            "Width": 420,
+            "Height": 320,
+            "CustomContainerDefinitionName": "BackgroundMask"
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "settingsButton",
+            "Y": 256,
+            "Width": 60,
+            "Height": 64,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "IconButtonStyle",
+                "X": 13,
+                "Y": 15,
+                "IconReleased": "__generated\\icon_theme_images_action_settings_35_35_E8F6FB.svg.png",
+                "IconPressed": "__generated\\icon_theme_images_action_settings_35_35_E8F6FB.svg.png"
+              },
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 60,
+                "Height": 64,
+                "LockToFlexButtonSize": true,
+                "ColorReleased": {
+                  "Red": 48,
+                  "Green": 48,
+                  "Blue": 48
+                },
+                "ColorPressed": {
+                  "Red": 48,
+                  "Green": 48,
+                  "Blue": 48
+                }
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "cameraButton",
+            "Y": 192,
+            "Width": 60,
+            "Height": 64,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "IconButtonStyle",
+                "X": 13,
+                "Y": 16,
+                "IconReleased": "__generated\\icon_theme_images_image_photo_camera_35_35_E8F6FB.svg.png",
+                "IconPressed": "__generated\\icon_theme_images_image_photo_camera_35_35_E8F6FB.svg.png"
+              },
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 60,
+                "Height": 64,
+                "LockToFlexButtonSize": true,
+                "ColorReleased": {
+                  "Red": 79,
+                  "Green": 79,
+                  "Blue": 79
+                },
+                "ColorPressed": {
+                  "Red": 48,
+                  "Green": 48,
+                  "Blue": 48
+                }
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "gotoButton",
+            "Y": 128,
+            "Width": 60,
+            "Height": 64,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "IconButtonStyle",
+                "X": 13,
+                "Y": 15,
+                "IconReleased": "__generated\\icon_theme_images_action_open_with_35_35_E8F6FB.svg.png",
+                "IconPressed": "__generated\\icon_theme_images_action_open_with_35_35_E8F6FB.svg.png"
+              },
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 60,
+                "Height": 64,
+                "LockToFlexButtonSize": true,
+                "ColorReleased": {
+                  "Red": 79,
+                  "Green": 79,
+                  "Blue": 79
+                },
+                "ColorPressed": {
+                  "Red": 48,
+                  "Green": 48,
+                  "Blue": 48
+                }
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "telemetryButton",
+            "Y": 64,
+            "Width": 60,
+            "Height": 64,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "IconButtonStyle",
+                "X": 13,
+                "Y": 14,
+                "IconReleased": "__generated\\icon_theme_images_action_assessment_35_35_E8F6FB.svg.png",
+                "IconPressed": "__generated\\icon_theme_images_action_assessment_35_35_E8F6FB.svg.png"
+              },
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 60,
+                "Height": 64,
+                "LockToFlexButtonSize": true,
+                "ColorReleased": {
+                  "Red": 79,
+                  "Green": 79,
+                  "Blue": 79
+                },
+                "ColorPressed": {
+                  "Red": 48,
+                  "Green": 48,
+                  "Blue": 48
+                }
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "homeButton",
+            "Width": 60,
+            "Height": 64,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "IconButtonStyle",
+                "X": 13,
+                "Y": 14,
+                "IconReleased": "__generated\\icon_theme_images_action_home_filled_35_35_E8F6FB.svg.png",
+                "IconPressed": "__generated\\icon_theme_images_action_home_filled_35_35_E8F6FB.svg.png"
+              },
+              {
+                "Type": "BoxWithBorderButtonStyle",
+                "Width": 60,
+                "Height": 64,
+                "LockToFlexButtonSize": true,
+                "ColorReleased": {
+                  "Red": 79,
+                  "Green": 79,
+                  "Blue": 79
+                },
+                "ColorPressed": {
+                  "Red": 48,
+                  "Green": 48,
+                  "Blue": 48
+                }
+              }
+            ]
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "menuTab3",
+            "X": 338,
+            "Y": 5,
+            "Width": 130,
+            "Height": 25,
+            "CustomContainerDefinitionName": "MenuTabDark1_3"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "menuTab2",
+            "X": 205,
+            "Y": 5,
+            "Width": 130,
+            "Height": 25,
+            "CustomContainerDefinitionName": "MenuTabDark1_3"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "menuTab1",
+            "X": 72,
+            "Y": 5,
+            "Width": 130,
+            "Height": 25,
+            "CustomContainerDefinitionName": "MenuTabDark1_3"
+          },
+          {
+            "Type": "CustomContainerInstance",
+            "Name": "menuTabSelected",
+            "X": 72,
+            "Y": 5,
+            "Width": 130,
+            "Height": 25,
+            "CustomContainerDefinitionName": "MenuTabLight1_3"
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "tabButton3",
+            "X": 338,
+            "Y": 5,
+            "Width": 130,
+            "Height": 25,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "TextButtonStyle",
+                "Y": 2,
+                "TextId": "__SingleUse_SYCE",
+                "TextRotation": "0",
+                "ColorReleased": {
+                  "Red": 196,
+                  "Green": 196,
+                  "Blue": 196
+                },
+                "ColorPressed": {
+                  "Red": 46,
+                  "Green": 46,
+                  "Blue": 46
+                }
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "tabButton2",
+            "X": 205,
+            "Y": 5,
+            "Width": 130,
+            "Height": 25,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "TextButtonStyle",
+                "Y": 2,
+                "TextId": "__SingleUse_F7YR",
+                "TextRotation": "0",
+                "ColorReleased": {
+                  "Red": 196,
+                  "Green": 196,
+                  "Blue": 196
+                },
+                "ColorPressed": {
+                  "Red": 46,
+                  "Green": 46,
+                  "Blue": 46
+                }
+              }
+            ]
+          },
+          {
+            "Type": "FlexButton",
+            "Name": "tabButton1",
+            "X": 72,
+            "Y": 5,
+            "Width": 130,
+            "Height": 25,
+            "ButtonTrigger": {
+              "Type": "ClickButtonTrigger"
+            },
+            "ButtonStyles": [
+              {
+                "Type": "TextButtonStyle",
+                "Y": 2,
+                "TextId": "__SingleUse_7ASP",
+                "TextRotation": "0",
+                "ColorReleased": {
+                  "Red": 196,
+                  "Green": 196,
+                  "Blue": 196
+                },
+                "ColorPressed": {
+                  "Red": 46,
+                  "Green": 46,
+                  "Blue": 46
+                }
+              }
+            ]
+          },
+          {
+            "Type": "Container",
+            "Name": "tabContainer3",
+            "X": 65,
+            "Y": 30,
+            "Width": 410,
+            "Height": 285,
+            "Visible": false,
+            "Components": [
+              {
+                "Type": "TextArea",
+                "Name": "textArea1_1_1",
+                "X": 169,
+                "Y": 134,
+                "Width": 42,
+                "Height": 20,
+                "TextId": "__SingleUse_94QE",
+                "TextRotation": "0",
+                "AutoSize": true
+              }
+            ]
+          },
+          {
+            "Type": "Container",
+            "Name": "tabContainer2",
+            "X": 65,
+            "Y": 30,
+            "Width": 410,
+            "Height": 285,
+            "Visible": false,
+            "Components": [
+              {
+                "Type": "TextArea",
+                "Name": "textArea1_1",
+                "X": 169,
+                "Y": 134,
+                "Width": 42,
+                "Height": 20,
+                "TextId": "__SingleUse_DYAU",
+                "TextRotation": "0",
+                "AutoSize": true
+              }
+            ]
+          },
+          {
+            "Type": "Container",
+            "Name": "tabContainer1",
+            "X": 65,
+            "Y": 30,
+            "Width": 410,
+            "Height": 285,
+            "Components": [
+              {
+                "Type": "TextArea",
+                "Name": "textArea1",
+                "X": 169,
+                "Y": 134,
+                "Width": 42,
+                "Height": 20,
+                "TextId": "__SingleUse_VEYC",
+                "TextRotation": "0",
+                "AutoSize": true
+              }
+            ]
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "tabButton1",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "tabButton1"
+            },
+            "Action": {
+              "Type": "ActionMove",
+              "X": 72,
+              "Y": 5,
+              "Easing": "Linear",
+              "EasingOption": "InOut",
+              "ActionComponent": "menuTabSelected"
+            }
+          },
+          {
+            "InteractionName": "tabButton2",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "tabButton2"
+            },
+            "Action": {
+              "Type": "ActionMove",
+              "X": 205,
+              "Y": 5,
+              "Easing": "Linear",
+              "EasingOption": "InOut",
+              "ActionComponent": "menuTabSelected"
+            }
+          },
+          {
+            "InteractionName": "tabButton3",
+            "HasCompletedTrigger": true,
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "tabButton3"
+            },
+            "Action": {
+              "Type": "ActionMove",
+              "X": 337,
+              "Y": 5,
+              "Easing": "Linear",
+              "EasingOption": "InOut",
+              "ActionComponent": "menuTabSelected"
+            }
+          },
+          {
+            "InteractionName": "hideTab2_Tab1Active",
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "tabButton1"
+            },
+            "Action": {
+              "Type": "ActionHide",
+              "ActionComponent": "tabContainer2"
+            }
+          },
+          {
+            "InteractionName": "hideTab2_Tab3Active",
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "tabButton3"
+            },
+            "Action": {
+              "Type": "ActionHide",
+              "ActionComponent": "tabContainer2"
+            }
+          },
+          {
+            "InteractionName": "hideTab1_Tab2Active",
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "tabButton2"
+            },
+            "Action": {
+              "Type": "ActionHide",
+              "ActionComponent": "tabContainer1"
+            }
+          },
+          {
+            "InteractionName": "hideTab1_Tab3Active",
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "tabButton3"
+            },
+            "Action": {
+              "Type": "ActionHide",
+              "ActionComponent": "tabContainer1"
+            }
+          },
+          {
+            "InteractionName": "hideTab3_Tab1Active",
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "tabButton1"
+            },
+            "Action": {
+              "Type": "ActionHide",
+              "ActionComponent": "tabContainer3"
+            }
+          },
+          {
+            "InteractionName": "hideTab3_Tab2Active",
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "tabButton2"
+            },
+            "Action": {
+              "Type": "ActionHide",
+              "ActionComponent": "tabContainer3"
+            }
+          },
+          {
+            "InteractionName": "showTab1",
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "tabButton1"
+            },
+            "Action": {
+              "Type": "ActionShow",
+              "ActionComponent": "tabContainer1"
+            }
+          },
+          {
+            "InteractionName": "showTab2",
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "tabButton2"
+            },
+            "Action": {
+              "Type": "ActionShow",
+              "ActionComponent": "tabContainer2"
+            }
+          },
+          {
+            "InteractionName": "showTab3",
+            "Trigger": {
+              "Type": "TriggerInteractionCompleted",
+              "InteractionToTriggerOn": "tabButton3"
+            },
+            "Action": {
+              "Type": "ActionShow",
+              "ActionComponent": "tabContainer3"
+            }
+          },
+          {
+            "InteractionName": "homeScreen",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "homeButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "HomeScreen"
+            }
+          },
+          {
+            "InteractionName": "telemetryScreen",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "telemetryButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "TelemetryScreen"
+            }
+          },
+          {
+            "InteractionName": "gotoScreen",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "gotoButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "GotoScreen"
+            }
+          },
+          {
+            "InteractionName": "cameraScreen",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "cameraButton"
+            },
+            "Action": {
+              "Type": "ActionGotoScreen",
+              "ScreenTransitionType": "ScreenTransitionNone",
+              "ActionComponent": "CameraScreen"
+            }
+          }
+        ]
+      }
+    ],
+    "CustomContainerDefinitions": [
+      {
+        "Name": "Wheel_CAM",
+        "X": 210,
+        "Y": 123,
+        "Width": 40,
+        "Height": 74,
+        "Components": [
+          {
+            "Type": "TextArea",
+            "Name": "wheelNumber",
+            "Y": 4,
+            "Width": 40,
+            "Height": 70,
+            "TextId": "__SingleUse_R2D1",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 196,
+              "Green": 196,
+              "Blue": 196
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_CDZ5",
+              "UseBuffer": true,
+              "BufferSize": 4
+            }
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "Wheel_RADEC",
+        "X": 210,
+        "Y": 123,
+        "Width": 60,
+        "Height": 74,
+        "Components": [
+          {
+            "Type": "TextArea",
+            "Name": "wheelNumber",
+            "Y": 4,
+            "Width": 60,
+            "Height": 70,
+            "TextId": "__SingleUse_ZVGV",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 196,
+              "Green": 196,
+              "Blue": 196
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_TRW3",
+              "UseBuffer": true,
+              "BufferSize": 4
+            }
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "camSelected",
+        "X": 230,
+        "Y": 123,
+        "Width": 40,
+        "Height": 74,
+        "Components": [
+          {
+            "Type": "Line",
+            "Name": "line1",
+            "X": 1,
+            "Y": -3,
+            "Width": 60,
+            "Height": 10,
+            "Color": {
+              "Red": 196,
+              "Green": 196,
+              "Blue": 196
+            },
+            "StartX": 2.5,
+            "StartY": 5.0,
+            "EndX": 35.0,
+            "EndY": 5.0,
+            "LineWidth": 4.0,
+            "LineEndingStyle": "Round"
+          },
+          {
+            "Type": "Line",
+            "Name": "line1_1",
+            "X": 1,
+            "Y": 67,
+            "Width": 60,
+            "Height": 10,
+            "Color": {
+              "Red": 196,
+              "Green": 196,
+              "Blue": 196
+            },
+            "StartX": 2.5,
+            "StartY": 5.0,
+            "EndX": 35.0,
+            "EndY": 5.0,
+            "LineWidth": 4.0,
+            "LineEndingStyle": "Round"
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "signSelected",
+        "X": 230,
+        "Y": 123,
+        "Width": 20,
+        "Height": 74,
+        "Components": [
+          {
+            "Type": "Line",
+            "Name": "line1",
+            "X": 1,
+            "Y": -3,
+            "Width": 60,
+            "Height": 10,
+            "Color": {
+              "Red": 196,
+              "Green": 196,
+              "Blue": 196
+            },
+            "StartX": 2.5,
+            "StartY": 5.0,
+            "EndX": 15.0,
+            "EndY": 5.0,
+            "LineWidth": 4.0,
+            "LineEndingStyle": "Round"
+          },
+          {
+            "Type": "Line",
+            "Name": "line1_1",
+            "X": 1,
+            "Y": 67,
+            "Width": 60,
+            "Height": 10,
+            "Color": {
+              "Red": 196,
+              "Green": 196,
+              "Blue": 196
+            },
+            "StartX": 2.5,
+            "StartY": 5.0,
+            "EndX": 15.0,
+            "EndY": 5.0,
+            "LineWidth": 4.0,
+            "LineEndingStyle": "Round"
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "wheelSelected",
+        "X": 205,
+        "Y": 125,
+        "Width": 60,
+        "Height": 74,
+        "Components": [
+          {
+            "Type": "Line",
+            "Name": "line1",
+            "X": 1,
+            "Y": -3,
+            "Width": 60,
+            "Height": 10,
+            "Color": {
+              "Red": 196,
+              "Green": 196,
+              "Blue": 196
+            },
+            "StartX": 2.5,
+            "StartY": 5.0,
+            "EndX": 55.0,
+            "EndY": 5.0,
+            "LineWidth": 4.0,
+            "LineEndingStyle": "Round"
+          },
+          {
+            "Type": "Line",
+            "Name": "line1_1",
+            "X": 1,
+            "Y": 67,
+            "Width": 60,
+            "Height": 10,
+            "Color": {
+              "Red": 196,
+              "Green": 196,
+              "Blue": 196
+            },
+            "StartX": 2.5,
+            "StartY": 5.0,
+            "EndX": 55.0,
+            "EndY": 5.0,
+            "LineWidth": 4.0,
+            "LineEndingStyle": "Round"
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "MenuTabLight1",
+        "X": 43,
+        "Y": 148,
+        "Width": 394,
+        "Height": 25,
+        "Components": [
+          {
+            "Type": "Shape",
+            "Name": "Tab",
+            "Width": 394,
+            "Height": 25,
+            "Color": {
+              "Red": 56,
+              "Green": 56,
+              "Blue": 56
+            },
+            "Points": [
+              {
+                "X": 5.0
+              },
+              {
+                "Y": 25.0
+              },
+              {
+                "X": 394.0,
+                "Y": 25.0
+              },
+              {
+                "X": 389.0
+              }
+            ],
+            "XScale": 1.0,
+            "YScale": 1.0
+          },
+          {
+            "Type": "Circle",
+            "Name": "Right_corner",
+            "X": -4,
+            "Y": -8,
+            "Width": 12,
+            "Height": 12,
+            "Color": {
+              "Red": 31,
+              "Green": 31,
+              "Blue": 31
+            },
+            "CenterX": 12.5,
+            "CenterY": 12.5,
+            "Radius": 7.0,
+            "LineWidth": 5.0,
+            "StartAngle": 285.0,
+            "EndAngle": 360.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "Circle",
+            "Name": "Left_corner",
+            "X": 385,
+            "Y": -8,
+            "Width": 12,
+            "Height": 12,
+            "Color": {
+              "Red": 31,
+              "Green": 31,
+              "Blue": 31
+            },
+            "CenterX": 0.5,
+            "CenterY": 12.5,
+            "Radius": 7.0,
+            "LineWidth": 5.0,
+            "EndAngle": 75.0,
+            "CapPrecision": "Butt"
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "MenuTabLight1_3",
+        "X": 175,
+        "Y": 150,
+        "Width": 130,
+        "Height": 25,
+        "Components": [
+          {
+            "Type": "Shape",
+            "Name": "Tab",
+            "Width": 130,
+            "Height": 25,
+            "Color": {
+              "Red": 56,
+              "Green": 56,
+              "Blue": 56
+            },
+            "Points": [
+              {
+                "X": 5.0
+              },
+              {
+                "Y": 25.0
+              },
+              {
+                "X": 130.0,
+                "Y": 25.0
+              },
+              {
+                "X": 125.0
+              }
+            ],
+            "XScale": 1.0,
+            "YScale": 1.0
+          },
+          {
+            "Type": "Circle",
+            "Name": "Right_corner",
+            "X": -4,
+            "Y": -8,
+            "Width": 12,
+            "Height": 12,
+            "Color": {
+              "Red": 31,
+              "Green": 31,
+              "Blue": 31
+            },
+            "CenterX": 12.5,
+            "CenterY": 12.5,
+            "Radius": 7.0,
+            "LineWidth": 5.0,
+            "StartAngle": 285.0,
+            "EndAngle": 360.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "Circle",
+            "Name": "Left_corner",
+            "X": 121,
+            "Y": -8,
+            "Width": 12,
+            "Height": 12,
+            "Color": {
+              "Red": 31,
+              "Green": 31,
+              "Blue": 31
+            },
+            "CenterX": 0.5,
+            "CenterY": 12.5,
+            "Radius": 7.0,
+            "LineWidth": 5.0,
+            "EndAngle": 75.0,
+            "CapPrecision": "Butt"
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "MenuTabDark1_3",
+        "X": 175,
+        "Y": 150,
+        "Width": 130,
+        "Height": 25,
+        "Components": [
+          {
+            "Type": "Shape",
+            "Name": "Tab",
+            "Width": 130,
+            "Height": 25,
+            "Color": {
+              "Red": 36,
+              "Green": 36,
+              "Blue": 36
+            },
+            "Points": [
+              {
+                "X": 5.0
+              },
+              {
+                "Y": 25.0
+              },
+              {
+                "X": 130.0,
+                "Y": 25.0
+              },
+              {
+                "X": 125.0
+              }
+            ],
+            "XScale": 1.0,
+            "YScale": 1.0
+          },
+          {
+            "Type": "Circle",
+            "Name": "Right_corner",
+            "X": -4,
+            "Y": -8,
+            "Width": 12,
+            "Height": 12,
+            "Color": {
+              "Red": 31,
+              "Green": 31,
+              "Blue": 31
+            },
+            "CenterX": 12.5,
+            "CenterY": 12.5,
+            "Radius": 7.0,
+            "LineWidth": 5.0,
+            "StartAngle": 285.0,
+            "EndAngle": 360.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "Circle",
+            "Name": "Left_corner",
+            "X": 121,
+            "Y": -8,
+            "Width": 12,
+            "Height": 12,
+            "Color": {
+              "Red": 31,
+              "Green": 31,
+              "Blue": 31
+            },
+            "CenterX": 0.5,
+            "CenterY": 12.5,
+            "Radius": 7.0,
+            "LineWidth": 5.0,
+            "EndAngle": 75.0,
+            "CapPrecision": "Butt"
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "MenuTabLight1_2",
+        "X": 175,
+        "Y": 150,
+        "Width": 195,
+        "Height": 25,
+        "Components": [
+          {
+            "Type": "Shape",
+            "Name": "Tab",
+            "Width": 195,
+            "Height": 25,
+            "Color": {
+              "Red": 56,
+              "Green": 56,
+              "Blue": 56
+            },
+            "Points": [
+              {
+                "X": 5.0
+              },
+              {
+                "Y": 25.0
+              },
+              {
+                "X": 195.0,
+                "Y": 25.0
+              },
+              {
+                "X": 190.0
+              }
+            ],
+            "XScale": 1.0,
+            "YScale": 1.0
+          },
+          {
+            "Type": "Circle",
+            "Name": "Right_corner",
+            "X": -4,
+            "Y": -8,
+            "Width": 12,
+            "Height": 12,
+            "Color": {
+              "Red": 31,
+              "Green": 31,
+              "Blue": 31
+            },
+            "CenterX": 12.5,
+            "CenterY": 12.5,
+            "Radius": 7.0,
+            "LineWidth": 5.0,
+            "StartAngle": 285.0,
+            "EndAngle": 360.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "Circle",
+            "Name": "Left_corner",
+            "X": 186,
+            "Y": -8,
+            "Width": 12,
+            "Height": 12,
+            "Color": {
+              "Red": 31,
+              "Green": 31,
+              "Blue": 31
+            },
+            "CenterX": 0.5,
+            "CenterY": 12.5,
+            "Radius": 7.0,
+            "LineWidth": 5.0,
+            "EndAngle": 75.0,
+            "CapPrecision": "Butt"
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "MenuTabDark1_2",
+        "X": 175,
+        "Y": 150,
+        "Width": 195,
+        "Height": 25,
+        "Components": [
+          {
+            "Type": "Shape",
+            "Name": "Tab",
+            "Width": 195,
+            "Height": 25,
+            "Color": {
+              "Red": 36,
+              "Green": 36,
+              "Blue": 36
+            },
+            "Points": [
+              {
+                "X": 5.0
+              },
+              {
+                "Y": 25.0
+              },
+              {
+                "X": 195.0,
+                "Y": 25.0
+              },
+              {
+                "X": 190.0
+              }
+            ],
+            "XScale": 1.0,
+            "YScale": 1.0
+          },
+          {
+            "Type": "Circle",
+            "Name": "Right_corner",
+            "X": -4,
+            "Y": -8,
+            "Width": 12,
+            "Height": 12,
+            "Color": {
+              "Red": 31,
+              "Green": 31,
+              "Blue": 31
+            },
+            "CenterX": 12.5,
+            "CenterY": 12.5,
+            "Radius": 7.0,
+            "LineWidth": 5.0,
+            "StartAngle": 285.0,
+            "EndAngle": 360.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "Circle",
+            "Name": "Left_corner",
+            "X": 186,
+            "Y": -8,
+            "Width": 12,
+            "Height": 12,
+            "Color": {
+              "Red": 31,
+              "Green": 31,
+              "Blue": 31
+            },
+            "CenterX": 0.5,
+            "CenterY": 12.5,
+            "Radius": 7.0,
+            "LineWidth": 5.0,
+            "EndAngle": 75.0,
+            "CapPrecision": "Butt"
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "BackgroundLargeRADEC",
+        "X": 90,
+        "Y": 115,
+        "Width": 306,
+        "Height": 90,
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "Box",
+            "Width": 306,
+            "Height": 90,
+            "Color": {
+              "Red": 64,
+              "Green": 64,
+              "Blue": 64
+            }
+          },
+          {
+            "Type": "Circle",
+            "Name": "CornerRB",
+            "X": 301,
+            "Y": 85,
+            "Width": 15,
+            "Height": 15,
+            "Color": {
+              "Red": 56,
+              "Green": 56,
+              "Blue": 56
+            },
+            "Radius": 10.0,
+            "LineWidth": 10.0,
+            "StartAngle": 90.0,
+            "EndAngle": 180.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "Circle",
+            "Name": "CornerLB",
+            "X": -10,
+            "Y": 85,
+            "Width": 15,
+            "Height": 15,
+            "Visible": false,
+            "Color": {
+              "Red": 89,
+              "Green": 89,
+              "Blue": 89
+            },
+            "CenterX": 15.0,
+            "Radius": 10.0,
+            "LineWidth": 10.0,
+            "StartAngle": 270.0,
+            "EndAngle": 180.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "Circle",
+            "Name": "CornerRT",
+            "X": 301,
+            "Y": -10,
+            "Width": 15,
+            "Height": 15,
+            "Color": {
+              "Red": 56,
+              "Green": 56,
+              "Blue": 56
+            },
+            "CenterY": 15.0,
+            "Radius": 10.0,
+            "LineWidth": 10.0,
+            "EndAngle": 90.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "Circle",
+            "Name": "CornerLT",
+            "X": -10,
+            "Y": -10,
+            "Width": 15,
+            "Height": 15,
+            "Visible": false,
+            "Color": {
+              "Red": 89,
+              "Green": 89,
+              "Blue": 89
+            },
+            "CenterX": 15.0,
+            "CenterY": 15.0,
+            "Radius": 10.0,
+            "LineWidth": 10.0,
+            "StartAngle": 270.0,
+            "EndAngle": 360.0,
+            "CapPrecision": "Butt"
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "BackgroundSmallRADEC",
+        "X": 205,
+        "Y": 115,
+        "Width": 89,
+        "Height": 90,
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "Box",
+            "Width": 89,
+            "Height": 90,
+            "Color": {
+              "Red": 64,
+              "Green": 64,
+              "Blue": 64
+            }
+          },
+          {
+            "Type": "Circle",
+            "Name": "CornerRB",
+            "X": 84,
+            "Y": 85,
+            "Width": 15,
+            "Height": 15,
+            "Visible": false,
+            "Color": {
+              "Red": 89,
+              "Green": 89,
+              "Blue": 89
+            },
+            "Radius": 10.0,
+            "LineWidth": 10.0,
+            "StartAngle": 90.0,
+            "EndAngle": 180.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "Circle",
+            "Name": "CornerLB",
+            "X": -10,
+            "Y": 85,
+            "Width": 15,
+            "Height": 15,
+            "Color": {
+              "Red": 56,
+              "Green": 56,
+              "Blue": 56
+            },
+            "CenterX": 15.0,
+            "Radius": 10.0,
+            "LineWidth": 10.0,
+            "StartAngle": 270.0,
+            "EndAngle": 180.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "Circle",
+            "Name": "CornerRT",
+            "X": 84,
+            "Y": -10,
+            "Width": 15,
+            "Height": 15,
+            "Visible": false,
+            "Color": {
+              "Red": 89,
+              "Green": 89,
+              "Blue": 89
+            },
+            "CenterY": 15.0,
+            "Radius": 10.0,
+            "LineWidth": 10.0,
+            "EndAngle": 90.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "Circle",
+            "Name": "CornerLT",
+            "X": -10,
+            "Y": -10,
+            "Width": 15,
+            "Height": 15,
+            "Color": {
+              "Red": 56,
+              "Green": 56,
+              "Blue": 56
+            },
+            "CenterX": 15.0,
+            "CenterY": 15.0,
+            "Radius": 10.0,
+            "LineWidth": 10.0,
+            "StartAngle": 270.0,
+            "EndAngle": 360.0,
+            "CapPrecision": "Butt"
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "GotoButtonMask",
+        "X": 41,
+        "Y": 123,
+        "Width": 398,
+        "Height": 79,
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "Box",
+            "Width": 398,
+            "Height": 75,
+            "Visible": false,
+            "Color": {
+              "Red": 79,
+              "Green": 79,
+              "Blue": 79
+            }
+          },
+          {
+            "Type": "Circle",
+            "Name": "CornerRB",
+            "X": 393,
+            "Y": 74,
+            "Width": 15,
+            "Height": 15,
+            "Color": {
+              "Red": 56,
+              "Green": 56,
+              "Blue": 56
+            },
+            "Radius": 10.0,
+            "LineWidth": 10.0,
+            "StartAngle": 90.0,
+            "EndAngle": 180.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "Circle",
+            "Name": "CornerLB",
+            "X": -10,
+            "Y": 74,
+            "Width": 15,
+            "Height": 15,
+            "Color": {
+              "Red": 56,
+              "Green": 56,
+              "Blue": 56
+            },
+            "CenterX": 15.0,
+            "Radius": 10.0,
+            "LineWidth": 10.0,
+            "StartAngle": 270.0,
+            "EndAngle": 180.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "Circle",
+            "Name": "CornerRT",
+            "X": 393,
+            "Y": -10,
+            "Width": 15,
+            "Height": 15,
+            "Color": {
+              "Red": 56,
+              "Green": 56,
+              "Blue": 56
+            },
+            "CenterY": 15.0,
+            "Radius": 10.0,
+            "LineWidth": 10.0,
+            "EndAngle": 90.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "Circle",
+            "Name": "CornerLT",
+            "X": -10,
+            "Y": -10,
+            "Width": 15,
+            "Height": 15,
+            "Color": {
+              "Red": 56,
+              "Green": 56,
+              "Blue": 56
+            },
+            "CenterX": 15.0,
+            "CenterY": 15.0,
+            "Radius": 10.0,
+            "LineWidth": 10.0,
+            "StartAngle": 270.0,
+            "EndAngle": 360.0,
+            "CapPrecision": "Butt"
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "RA_Label",
+        "X": 195,
+        "Y": 115,
+        "Width": 89,
+        "Height": 90,
+        "Components": [
+          {
+            "Type": "TextArea",
+            "Name": "RA_Label_1",
+            "X": 14,
+            "Y": 17,
+            "Width": 30,
+            "Height": 57,
+            "TextId": "__SingleUse_YSR8",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 196,
+              "Green": 196,
+              "Blue": 196
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "RA_Label_1_1",
+            "X": 44,
+            "Y": 17,
+            "Width": 30,
+            "Height": 57,
+            "TextId": "__SingleUse_OI7Q",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 196,
+              "Green": 196,
+              "Blue": 196
+            }
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "DEC_Label",
+        "X": 195,
+        "Y": 115,
+        "Width": 89,
+        "Height": 90,
+        "Components": [
+          {
+            "Type": "TextArea",
+            "Name": "DEC_Label",
+            "X": 7,
+            "Y": 17,
+            "Width": 25,
+            "Height": 57,
+            "TextId": "__SingleUse_UPQH",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 196,
+              "Green": 196,
+              "Blue": 196
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "DEC_Label_1",
+            "X": 32,
+            "Y": 17,
+            "Width": 25,
+            "Height": 57,
+            "TextId": "__SingleUse_S7GG",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 196,
+              "Green": 196,
+              "Blue": 196
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "DEC_Label_1_1",
+            "X": 56,
+            "Y": 17,
+            "Width": 25,
+            "Height": 57,
+            "TextId": "__SingleUse_YTK9",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 196,
+              "Green": 196,
+              "Blue": 196
+            }
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "Flags",
+        "X": 163,
+        "Y": 149,
+        "Width": 155,
+        "Height": 22,
+        "Components": [
+          {
+            "Type": "Circle",
+            "Name": "LED_Unknown",
+            "Width": 32,
+            "Height": 22,
+            "Color": {
+              "Red": 48,
+              "Green": 48,
+              "Blue": 48
+            },
+            "CenterX": 16.0,
+            "CenterY": 11.0,
+            "Radius": 7.5,
+            "EndAngle": 360.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "Circle",
+            "Name": "LED_False",
+            "Width": 32,
+            "Height": 22,
+            "Visible": false,
+            "Color": {
+              "Red": 153,
+              "Green": 24,
+              "Blue": 9
+            },
+            "CenterX": 16.0,
+            "CenterY": 11.0,
+            "Radius": 7.5,
+            "EndAngle": 360.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "Circle",
+            "Name": "LED_True",
+            "Width": 32,
+            "Height": 22,
+            "Visible": false,
+            "Color": {
+              "Red": 28,
+              "Green": 153,
+              "Blue": 9
+            },
+            "CenterX": 16.0,
+            "CenterY": 11.0,
+            "Radius": 7.5,
+            "EndAngle": 360.0,
+            "CapPrecision": "Butt"
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "LabelBox_Large",
+        "X": 41,
+        "Y": 148,
+        "Width": 398,
+        "Height": 25,
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "box1_3",
+            "Width": 398,
+            "Height": 25,
+            "Color": {
+              "Red": 64,
+              "Green": 64,
+              "Blue": 64
+            }
+          },
+          {
+            "Type": "Circle",
+            "Name": "CornerRB",
+            "X": 393,
+            "Y": 20,
+            "Width": 15,
+            "Height": 15,
+            "Visible": false,
+            "Color": {
+              "Red": 56,
+              "Green": 56,
+              "Blue": 56
+            },
+            "Radius": 10.0,
+            "LineWidth": 10.0,
+            "StartAngle": 90.0,
+            "EndAngle": 180.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "Circle",
+            "Name": "CornerLB",
+            "X": -10,
+            "Y": 20,
+            "Width": 15,
+            "Height": 15,
+            "Visible": false,
+            "Color": {
+              "Red": 56,
+              "Green": 56,
+              "Blue": 56
+            },
+            "CenterX": 15.0,
+            "Radius": 10.0,
+            "LineWidth": 10.0,
+            "StartAngle": 270.0,
+            "EndAngle": 180.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "Circle",
+            "Name": "CornerRT",
+            "X": 393,
+            "Y": -10,
+            "Width": 15,
+            "Height": 15,
+            "Color": {
+              "Red": 56,
+              "Green": 56,
+              "Blue": 56
+            },
+            "CenterY": 15.0,
+            "Radius": 10.0,
+            "LineWidth": 10.0,
+            "EndAngle": 90.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "Circle",
+            "Name": "CornerLT_1",
+            "X": -10,
+            "Y": -10,
+            "Width": 15,
+            "Height": 15,
+            "Color": {
+              "Red": 56,
+              "Green": 56,
+              "Blue": 56
+            },
+            "CenterX": 15.0,
+            "CenterY": 15.0,
+            "Radius": 10.0,
+            "LineWidth": 10.0,
+            "StartAngle": 270.0,
+            "EndAngle": 360.0,
+            "CapPrecision": "Butt"
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "LabelBox_Medium",
+        "X": 155,
+        "Y": 148,
+        "Width": 220,
+        "Height": 25,
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "box1_3",
+            "Width": 220,
+            "Height": 25,
+            "Color": {
+              "Red": 64,
+              "Green": 64,
+              "Blue": 64
+            }
+          },
+          {
+            "Type": "Circle",
+            "Name": "CornerRB",
+            "X": 215,
+            "Y": 20,
+            "Width": 15,
+            "Height": 15,
+            "Visible": false,
+            "Color": {
+              "Red": 56,
+              "Green": 56,
+              "Blue": 56
+            },
+            "Radius": 10.0,
+            "LineWidth": 10.0,
+            "StartAngle": 90.0,
+            "EndAngle": 180.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "Circle",
+            "Name": "CornerLB",
+            "X": -10,
+            "Y": 20,
+            "Width": 15,
+            "Height": 15,
+            "Visible": false,
+            "Color": {
+              "Red": 56,
+              "Green": 56,
+              "Blue": 56
+            },
+            "CenterX": 15.0,
+            "Radius": 10.0,
+            "LineWidth": 10.0,
+            "StartAngle": 270.0,
+            "EndAngle": 180.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "Circle",
+            "Name": "CornerRT",
+            "X": 215,
+            "Y": -10,
+            "Width": 15,
+            "Height": 15,
+            "Color": {
+              "Red": 56,
+              "Green": 56,
+              "Blue": 56
+            },
+            "CenterY": 15.0,
+            "Radius": 10.0,
+            "LineWidth": 10.0,
+            "EndAngle": 90.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "Circle",
+            "Name": "CornerLT_1",
+            "X": -10,
+            "Y": -10,
+            "Width": 15,
+            "Height": 15,
+            "Color": {
+              "Red": 56,
+              "Green": 56,
+              "Blue": 56
+            },
+            "CenterX": 15.0,
+            "CenterY": 15.0,
+            "Radius": 10.0,
+            "LineWidth": 10.0,
+            "StartAngle": 270.0,
+            "EndAngle": 360.0,
+            "CapPrecision": "Butt"
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "LabelBox_Half",
+        "X": 155,
+        "Y": 148,
+        "Width": 195,
+        "Height": 25,
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "box1_3",
+            "Width": 195,
+            "Height": 25,
+            "Color": {
+              "Red": 64,
+              "Green": 64,
+              "Blue": 64
+            }
+          },
+          {
+            "Type": "Circle",
+            "Name": "CornerRB",
+            "X": 190,
+            "Y": 20,
+            "Width": 15,
+            "Height": 15,
+            "Visible": false,
+            "Color": {
+              "Red": 56,
+              "Green": 56,
+              "Blue": 56
+            },
+            "Radius": 10.0,
+            "LineWidth": 10.0,
+            "StartAngle": 90.0,
+            "EndAngle": 180.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "Circle",
+            "Name": "CornerLB",
+            "X": -10,
+            "Y": 20,
+            "Width": 15,
+            "Height": 15,
+            "Visible": false,
+            "Color": {
+              "Red": 56,
+              "Green": 56,
+              "Blue": 56
+            },
+            "CenterX": 15.0,
+            "Radius": 10.0,
+            "LineWidth": 10.0,
+            "StartAngle": 270.0,
+            "EndAngle": 180.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "Circle",
+            "Name": "CornerRT",
+            "X": 190,
+            "Y": -10,
+            "Width": 15,
+            "Height": 15,
+            "Color": {
+              "Red": 56,
+              "Green": 56,
+              "Blue": 56
+            },
+            "CenterY": 15.0,
+            "Radius": 10.0,
+            "LineWidth": 10.0,
+            "EndAngle": 90.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "Circle",
+            "Name": "CornerLT_1",
+            "X": -10,
+            "Y": -10,
+            "Width": 15,
+            "Height": 15,
+            "Color": {
+              "Red": 56,
+              "Green": 56,
+              "Blue": 56
+            },
+            "CenterX": 15.0,
+            "CenterY": 15.0,
+            "Radius": 10.0,
+            "LineWidth": 10.0,
+            "StartAngle": 270.0,
+            "EndAngle": 360.0,
+            "CapPrecision": "Butt"
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "LabelBox_Small",
+        "X": 155,
+        "Y": 148,
+        "Width": 170,
+        "Height": 25,
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "box1_3",
+            "Width": 170,
+            "Height": 25,
+            "Color": {
+              "Red": 64,
+              "Green": 64,
+              "Blue": 64
+            }
+          },
+          {
+            "Type": "Circle",
+            "Name": "CornerRB",
+            "X": 165,
+            "Y": 20,
+            "Width": 15,
+            "Height": 15,
+            "Visible": false,
+            "Color": {
+              "Red": 56,
+              "Green": 56,
+              "Blue": 56
+            },
+            "Radius": 10.0,
+            "LineWidth": 10.0,
+            "StartAngle": 90.0,
+            "EndAngle": 180.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "Circle",
+            "Name": "CornerLB",
+            "X": -10,
+            "Y": 20,
+            "Width": 15,
+            "Height": 15,
+            "Visible": false,
+            "Color": {
+              "Red": 56,
+              "Green": 56,
+              "Blue": 56
+            },
+            "CenterX": 15.0,
+            "Radius": 10.0,
+            "LineWidth": 10.0,
+            "StartAngle": 270.0,
+            "EndAngle": 180.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "Circle",
+            "Name": "CornerRT",
+            "X": 165,
+            "Y": -10,
+            "Width": 15,
+            "Height": 15,
+            "Color": {
+              "Red": 56,
+              "Green": 56,
+              "Blue": 56
+            },
+            "CenterY": 15.0,
+            "Radius": 10.0,
+            "LineWidth": 10.0,
+            "EndAngle": 90.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "Circle",
+            "Name": "CornerLT_1",
+            "X": -10,
+            "Y": -10,
+            "Width": 15,
+            "Height": 15,
+            "Color": {
+              "Red": 56,
+              "Green": 56,
+              "Blue": 56
+            },
+            "CenterX": 15.0,
+            "CenterY": 15.0,
+            "Radius": 10.0,
+            "LineWidth": 10.0,
+            "StartAngle": 270.0,
+            "EndAngle": 360.0,
+            "CapPrecision": "Butt"
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "BackgroundMask",
+        "X": 60,
+        "Y": 1,
+        "Width": 420,
+        "Height": 320,
+        "Components": [
+          {
+            "Type": "Circle",
+            "Name": "CornerRB",
+            "X": 410,
+            "Y": 310,
+            "Width": 15,
+            "Height": 15,
+            "Color": {
+              "Red": 31,
+              "Green": 31,
+              "Blue": 31
+            },
+            "Radius": 10.0,
+            "LineWidth": 10.0,
+            "StartAngle": 90.0,
+            "EndAngle": 180.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "Circle",
+            "Name": "CornerLB",
+            "X": -5,
+            "Y": 310,
+            "Width": 15,
+            "Height": 15,
+            "Color": {
+              "Red": 31,
+              "Green": 31,
+              "Blue": 31
+            },
+            "CenterX": 15.0,
+            "Radius": 10.0,
+            "LineWidth": 10.0,
+            "StartAngle": 270.0,
+            "EndAngle": 180.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "Circle",
+            "Name": "CornerRT",
+            "X": 410,
+            "Y": 20,
+            "Width": 15,
+            "Height": 15,
+            "Color": {
+              "Red": 31,
+              "Green": 31,
+              "Blue": 31
+            },
+            "CenterY": 15.0,
+            "Radius": 10.0,
+            "LineWidth": 10.0,
+            "EndAngle": 90.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "Circle",
+            "Name": "CornerLT",
+            "X": -5,
+            "Y": 20,
+            "Width": 15,
+            "Height": 15,
+            "Color": {
+              "Red": 31,
+              "Green": 31,
+              "Blue": 31
+            },
+            "CenterX": 15.0,
+            "CenterY": 15.0,
+            "Radius": 10.0,
+            "LineWidth": 10.0,
+            "StartAngle": 270.0,
+            "EndAngle": 360.0,
+            "CapPrecision": "Butt"
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "SystemStatusBackground",
+        "X": 155,
+        "Y": 80,
+        "Width": 170,
+        "Height": 160,
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "SystemStatusBoxBackground",
+            "Width": 170,
+            "Height": 160,
+            "Color": {
+              "Red": 64,
+              "Green": 64,
+              "Blue": 64
+            }
+          },
+          {
+            "Type": "Circle",
+            "Name": "CornerRB_S",
+            "X": 165,
+            "Y": 155,
+            "Width": 15,
+            "Height": 15,
+            "Color": {
+              "Red": 56,
+              "Green": 56,
+              "Blue": 56
+            },
+            "Radius": 10.0,
+            "LineWidth": 10.0,
+            "StartAngle": 90.0,
+            "EndAngle": 180.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "Circle",
+            "Name": "CornerLB_S",
+            "X": -10,
+            "Y": 155,
+            "Width": 15,
+            "Height": 15,
+            "Color": {
+              "Red": 56,
+              "Green": 56,
+              "Blue": 56
+            },
+            "CenterX": 15.0,
+            "Radius": 10.0,
+            "LineWidth": 10.0,
+            "StartAngle": 270.0,
+            "EndAngle": 180.0,
+            "CapPrecision": "Butt"
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "PolarAlignmentBackground",
+        "X": 155,
+        "Y": 125,
+        "Width": 170,
+        "Height": 73,
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "PolarAlignmentBoxBackground",
+            "Width": 170,
+            "Height": 73,
+            "Color": {
+              "Red": 64,
+              "Green": 64,
+              "Blue": 64
+            }
+          },
+          {
+            "Type": "Circle",
+            "Name": "CornerRB_PA",
+            "X": 165,
+            "Y": 68,
+            "Width": 15,
+            "Height": 15,
+            "Color": {
+              "Red": 56,
+              "Green": 56,
+              "Blue": 56
+            },
+            "Radius": 10.0,
+            "LineWidth": 10.0,
+            "StartAngle": 90.0,
+            "EndAngle": 180.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "Circle",
+            "Name": "CornerLB_PA",
+            "X": -10,
+            "Y": 68,
+            "Width": 15,
+            "Height": 15,
+            "Color": {
+              "Red": 56,
+              "Green": 56,
+              "Blue": 56
+            },
+            "CenterX": 15.0,
+            "Radius": 10.0,
+            "LineWidth": 10.0,
+            "StartAngle": 270.0,
+            "EndAngle": 180.0,
+            "CapPrecision": "Butt"
+          }
+        ],
+        "Interactions": []
+      },
+      {
+        "Name": "ConsoleBackground",
+        "X": 130,
+        "Y": 25,
+        "Width": 220,
+        "Height": 270,
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "ConsoleBoxBackground",
+            "Width": 220,
+            "Height": 270,
+            "Color": {
+              "Red": 64,
+              "Green": 64,
+              "Blue": 64
+            }
+          },
+          {
+            "Type": "Circle",
+            "Name": "CornerRB_C",
+            "X": 215,
+            "Y": 265,
+            "Width": 15,
+            "Height": 15,
+            "Color": {
+              "Red": 56,
+              "Green": 56,
+              "Blue": 56
+            },
+            "Radius": 10.0,
+            "LineWidth": 10.0,
+            "StartAngle": 90.0,
+            "EndAngle": 180.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "Circle",
+            "Name": "CornerLB_C",
+            "X": -10,
+            "Y": 265,
+            "Width": 15,
+            "Height": 15,
+            "Color": {
+              "Red": 56,
+              "Green": 56,
+              "Blue": 56
+            },
+            "CenterX": 15.0,
+            "Radius": 10.0,
+            "LineWidth": 10.0,
+            "StartAngle": 270.0,
+            "EndAngle": 180.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "Circle",
+            "Name": "CornerRT_C",
+            "X": 215,
+            "Y": -10,
+            "Width": 15,
+            "Height": 15,
+            "Visible": false,
+            "Color": {
+              "Red": 56,
+              "Green": 56,
+              "Blue": 56
+            },
+            "CenterY": 15.0,
+            "Radius": 10.0,
+            "LineWidth": 10.0,
+            "EndAngle": 90.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "Circle",
+            "Name": "CornerLT_C",
+            "X": -10,
+            "Y": -10,
+            "Width": 15,
+            "Height": 15,
+            "Visible": false,
+            "Color": {
+              "Red": 56,
+              "Green": 56,
+              "Blue": 56
+            },
+            "CenterX": 15.0,
+            "CenterY": 15.0,
+            "Radius": 10.0,
+            "LineWidth": 10.0,
+            "StartAngle": 270.0,
+            "EndAngle": 360.0,
+            "CapPrecision": "Butt"
+          }
+        ],
+        "Interactions": []
+      }
+    ],
+    "Name": "PCK-HC",
+    "Resolution": {
+      "Width": 480,
+      "Height": 320
+    },
+    "SelectedColorDepth": 16,
+    "StartupScreenName": "Loading_screen",
+    "SelectedStartupLanguage": "GB",
+    "TouchGfxPath": "touchgfx",
+    "UIPath": ".",
+    "ApplicationTemplateName": "Simulator",
+    "ApplicationTemplateVersion": "2.0.0",
+    "ApplicationTemplateDescription": "Simulator Application Template",
+    "AvailableColorDepths": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      24
+    ],
+    "AvailableLCDs": {
+      "1": "LCD1bpp",
+      "2": "LCD2bpp",
+      "4": "LCD4bpp",
+      "8": "LCD8bpp_ARGB2222",
+      "16": "LCD16bpp",
+      "24": "LCD24bpp"
+    },
+    "AvailableSections": [
+      "ExtFlashSection",
+      "IntFlashSection"
+    ],
+    "AvailableResolutions": [],
+    "PhysicalButtons": [],
+    "FrameworkFeatures": {
+      "LCD16bpp": {
+        "Id": "LCD16bpp",
+        "IsEnabled": true
+      }
+    },
+    "GenerateAssetsCommand": "make -f simulator/gcc/Makefile assets -j8",
+    "PostGenerateCommand": "touchgfx update_project --project-file=simulator/msvs/Application.vcxproj",
+    "CompileSimulatorCommand": "make -f simulator/gcc/Makefile -j8",
+    "RunSimulatorCommand": "build\\bin\\simulator.exe",
+    "CompileTargetCommand": "",
+    "FlashTargetCommand": "",
+    "LandscapeSkinX": 0,
+    "LandscapeSkinY": 0,
+    "PortraitSkinX": 0,
+    "PortraitSkinY": 0,
+    "DisplayOrientation": "Landscape",
+    "AdditionalFeatures": [
+      "VectorFonts"
+    ]
+  },
+  "Version": "4.27.0",
+  "CreatedBy": "4.27.0"
+}
